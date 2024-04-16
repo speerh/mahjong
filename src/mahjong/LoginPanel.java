@@ -41,6 +41,7 @@ public class LoginPanel extends JPanel
     errorLabel = new JLabel("", JLabel.CENTER);
     errorLabel.setForeground(Color.RED);
     JLabel instructionLabel = new JLabel("Enter your username and password to log in.", JLabel.CENTER);
+    labelPanel.setOpaque(true);
     labelPanel.add(errorLabel);
     labelPanel.add(instructionLabel);
 
@@ -50,6 +51,7 @@ public class LoginPanel extends JPanel
     usernameField = new JTextField(10);
     JLabel passwordLabel = new JLabel("Password:", JLabel.RIGHT);
     passwordField = new JPasswordField(10);
+    loginPanel.setOpaque(true);
     loginPanel.add(usernameLabel);
     loginPanel.add(usernameField);
     loginPanel.add(passwordLabel);
@@ -61,14 +63,18 @@ public class LoginPanel extends JPanel
     submitButton.addActionListener(lc);
     JButton cancelButton = new JButton("Cancel");
     cancelButton.addActionListener(lc);    
+    buttonPanel.setOpaque(true);
     buttonPanel.add(submitButton);
     buttonPanel.add(cancelButton);
 
     // Arrange the three panels in a grid.
     JPanel grid = new JPanel(new GridLayout(3, 1, 0, 10));
+    grid.setOpaque(true);
     grid.add(labelPanel);
     grid.add(loginPanel);
     grid.add(buttonPanel);
     this.add(grid);
+    this.setBackground(Color.green);
+   
   }
 }

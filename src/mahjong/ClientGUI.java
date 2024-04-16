@@ -15,20 +15,21 @@ public class ClientGUI extends JFrame
    ChatClient client = new ChatClient();
     client.setHost("localhost");
     client.setPort(8300);
-    try
+    /*try
     {
-      client.openConnection();
+      //client.openConnection();
     }
     catch (IOException e)
     {
       e.printStackTrace();
-    }
+    }*/
     
     
     // Set the title and default close operation.
     this.setTitle("Chat Client");
     this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        
+    
+    
     // Create the card layout container.
     CardLayout cardLayout = new CardLayout();
     JPanel container = new JPanel(cardLayout);
@@ -68,6 +69,8 @@ public class ClientGUI extends JFrame
     // Show the JFrame.
     this.setSize(550, 350);
     this.setVisible(true);
+    this.getContentPane().setBackground(Color.GREEN);
+    
   }
 
   // Main function that creates the client GUI when the program is started.
