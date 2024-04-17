@@ -24,7 +24,7 @@ public class Database
 	//Read properties file
 	    Properties prop = new Properties();
 	    try {
-			FileInputStream fis = new FileInputStream("lab7out/db.properties");
+			FileInputStream fis = new FileInputStream("mahjong/db.properties");
 			prop.load(fis);
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block

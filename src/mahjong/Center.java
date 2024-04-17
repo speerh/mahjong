@@ -25,7 +25,7 @@ public class Center {
         for (int i = 0; i < 4; i++) {
         	 for (int j = 0; j < arr.length; j++) {
         		 tile.setTile(arr[j].substring(arr[j].length()-1), Integer.parseInt(arr[j].substring(arr[j].length())), null);
-        	centerTiles.add(tile);
+        		 centerTiles.add(tile);
         	 }
         }
     }
