@@ -23,10 +23,10 @@ public class Center {
         	 for (int j = 0; j < arr.length; j++) {
         		 
         		 tile = new Tile (null, 0, null);
-        		 
+        		 String str1 = arr[j].substring(0,arr[j].length()-1);
         		 int str2 = Integer.parseInt(arr[j].substring(arr[j].length()-1));
         		 
-        		 if(str2 == 1 || str2 == 9) {
+        		 if(str2 == 1 || str2 == 9 || (str1 == "wind" && str2 == 4) || (str1 == "dragon" && str2 == 4)) {
         			 terminal = true;
         		 }
         		 else {
@@ -64,12 +64,10 @@ public class Center {
 		
 		addToArrayList(originalTiles);
 		Collections.shuffle(centerTiles);
-		int i = 0;
+		
 		for(Tile tile : centerTiles) {
 		     System.out.println(tile.getSuit() + " " + tile.getNumber() + " " + tile.getTerminal());
-		     i++;
 		 }
-		System.out.println(i);
 		
 	}
 }
