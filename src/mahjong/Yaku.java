@@ -19,6 +19,7 @@ public class Yaku {
 
 			newTiles.add(suit + num);
 		}
+		
 		// Tanyao - hand does not contain terminals, 1's or 9s
 		String[] inputString = { "bamboo2", "bamboo3", "bamboo4", "bamboo5", "bamboo6", "bamboo7", "bamboo8",
 				"character2", "character3", "character4", "character5", "character6", "character7", "character8",
@@ -28,7 +29,7 @@ public class Yaku {
 			if (!newTiles.contains(item)) {
 				win = false;
 				break;
-			}else {
+			} else {
 				name = "Tanyao";
 				points = 40;
 				win = true;
