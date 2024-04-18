@@ -13,27 +13,32 @@ public class Center {
 	static Tile tile = new Tile (null, 0, null);
 	static boolean terminal;
 	
-	public Center() {
-		addToArrayList(originalTiles);
-		addToArrayList(originalTiles);
-		addToArrayList(originalTiles);
-		addToArrayList(originalTiles);
-		Collections.shuffle(centerTiles);
-		
-	}
+	
 	
 	public static void addToArrayList(String arr[])
     {
+		
+		
         for (int i = 0; i < 4; i++) {
         	 for (int j = 0; j < arr.length; j++) {
-        		 if(arr.length % 2 == 1 || arr.length % 2 == 9) {
+        		 
+        		 tile = new Tile (null, 0, null);
+        		 
+        		 int str2 = Integer.parseInt(arr[j].substring(arr[j].length()-1));
+        		 
+        		 if(str2 == 1 || str2 == 9) {
         			 terminal = true;
         		 }
         		 else {
         			 terminal = false;
         		 }
-        		 tile.setTile(arr[j].substring(arr[j].length()-1), Integer.parseInt(arr[j].substring(arr[j].length())), terminal);
+        		 
+        		 tile.setTile(arr[j].substring(0,arr[j].length()-1), Integer.parseInt(arr[j].substring(arr[j].length()-1)), terminal);
+        		 String tile1 = tile.getSuit();
+        		 int tile2 = tile.getNumber();
+        		 //System.out.println(tile1 + " " + tile2 + " " + terminal);
         		 centerTiles.add(tile);
+        		 
         	 }
         }
     }
@@ -49,5 +54,22 @@ public class Center {
 	
 	public void shuffle() {
 		Collections.shuffle(centerTiles);
+	}
+	
+	public static void main() {
+		System.out.println(centerTiles);
+	}
+	
+	public Center() {
+		
+		addToArrayList(originalTiles);
+		Collections.shuffle(centerTiles);
+		int i = 0;
+		for(Tile tile : centerTiles) {
+		     System.out.println(tile.getSuit() + " " + tile.getNumber() + " " + tile.getTerminal());
+		     i++;
+		 }
+		System.out.println(i);
+		
 	}
 }

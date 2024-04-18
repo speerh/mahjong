@@ -16,6 +16,7 @@ public class ChatServer extends AbstractServer {
 	private boolean running = false;
 	private Database database = new Database();
 	private String dml;
+	private Center center = new Center();
 
 	// Constructor
 	public ChatServer() {
@@ -40,6 +41,9 @@ public class ChatServer extends AbstractServer {
 		status.setText("Listening");
 		status.setForeground(Color.GREEN);
 		log.append("Server started\n");
+//		Tile tile = center.getFirstTile();
+//		String str = tile.getSuit();
+//		log.append(str);
 	}
 
 	public void serverStopped() {
