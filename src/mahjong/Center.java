@@ -29,6 +29,9 @@ public class Center {
         		 if(str2 == 1 || str2 == 9 || (str1 == "wind" && str2 == 4) || (str1 == "dragon" && str2 == 4)) {
         			 terminal = true;
         		 }
+        		 else if (str1 == "dragon" || str1 == "wind"){
+        			 terminal = true;
+        		 }
         		 else {
         			 terminal = false;
         		 }
