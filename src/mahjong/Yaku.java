@@ -19,13 +19,12 @@ public class Yaku {
 
 			newTiles.add(suit + num);
 		}
-		
 		// Tanyao - hand does not contain terminals, 1's or 9s
-		String[] inputString = { "bamboo2", "bamboo3", "bamboo4", "bamboo5", "bamboo6", "bamboo7", "bamboo8",
-				"character2", "character3", "character4", "character5", "character6", "character7", "character8",
-				"circle2", "circle3", "circle4", "circle5", "circle6", "circle7", "circle8" };
+		String[] Tanyao = { "bamboo2", "bamboo3", "bamboo4", "bamboo5", "bamboo6", "bamboo7", "bamboo8", "character2",
+				"character3", "character4", "character5", "character6", "character7", "character8", "circle2",
+				"circle3", "circle4", "circle5", "circle6", "circle7", "circle8" };
 
-		for (String item : inputString) {
+		for (String item : Tanyao) {
 			if (!newTiles.contains(item)) {
 				win = false;
 				break;
@@ -34,7 +33,74 @@ public class Yaku {
 				points = 40;
 				win = true;
 				break;
+
 			}
+		}
+		// Yakuhai - hand contains triplet of dragon
+		String[] Yakuhai = { "dragon1", "dragon2", "dragon3" };
+
+		for (String item : Yakuhai) {
+			if (!newTiles.contains(item)) {
+				win = false;
+				break;
+			} else {
+				name = "Yakuhai";
+				points = 40;
+				win = true;
+				break;
+
+			}
+
+		}
+		// Ittsuu - hand contains 1-9 of in same suit
+		String[] IttsuuBamboo = { "bamboo1", "bamboo2", "bamboo3", "bamboo4", "bamboo5", "bamboo6", "bamboo7",
+				"bamboo8", "bamboo9" };
+
+		for (String item : IttsuuBamboo) {
+			if (!newTiles.contains(item)) {
+				win = false;
+				break;
+			} else {
+				name = "Ittsuu";
+				points = 40;
+				win = true;
+				break;
+
+			}
+
+		}
+		// Ittsuu - hand contains 1-9 of in same suit
+		String[] IttsuuCircle = { "circle1", "circle2", "circle3", "circle4", "circle5", "circle6", "circle7",
+				"circle8", "circle9" };
+
+		for (String item : IttsuuCircle) {
+			if (!newTiles.contains(item)) {
+				win = false;
+				break;
+			} else {
+				name = "Ittsuu";
+				points = 40;
+				win = true;
+				break;
+
+			}
+		}
+		// Ittsuu - hand contains 1-9 of in same suit
+		String[] IttsuuChar = { "character1", "character2", "character3", "character4", "character5", "character6",
+				"character7", "character8", "character9" };
+
+		for (String item : IttsuuChar) {
+			if (!newTiles.contains(item)) {
+				win = false;
+				break;
+			} else {
+				name = "Ittsuu";
+				points = 40;
+				win = true;
+				break;
+
+			}
+
 		}
 	}
 }
