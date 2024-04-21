@@ -29,6 +29,10 @@ public class Hand implements Serializable{
 		tiles.add(discards.get(pos));
 		discards.remove(pos);
 	}
+	
+	public void setHand(ArrayList<Tile> tiles) {
+		this.tiles = tiles;
+	}
 	public ArrayList<Tile> sort(Hand hand){
 		ArrayList<Tile> character = new ArrayList<Tile>();
 		ArrayList<Tile> circle = new ArrayList<Tile>();
@@ -38,15 +42,15 @@ public class Hand implements Serializable{
 		ArrayList<Tile> sortedHand = new ArrayList<Tile>();
 		
 		for (Tile tile : hand.getTile()) {
-			if(tile.getSuit() == "character") {
+			if(tile.getSuit().equals("character")) {
 				character.add(tile);
-			} else if (tile.getSuit() == "circle") {
+			} else if (tile.getSuit().equals("circle")) {
 				circle.add(tile);
-			} else if (tile.getSuit() == "bamboo") {
+			} else if (tile.getSuit().equals("bamboo")) {
 				bamboo.add(tile);
-			} else if (tile.getSuit() == "dragon") {
+			} else if (tile.getSuit().equals("dragon")) {
 				dragon.add(tile);
-			} else if (tile.getSuit() == "wind") {
+			} else if (tile.getSuit().equals("wind")) {
 				wind.add(tile);
 			}
 		}

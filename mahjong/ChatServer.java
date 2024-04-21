@@ -45,20 +45,34 @@ public class ChatServer extends AbstractServer {
 		status.setForeground(Color.GREEN);
 		log.append("Server started\n");
 		
-		Tile tile1 = new Tile("bamboo", 2, false);
-		Tile tile2 = new Tile("bamboo", 2, false);
-		Tile tile3 = new Tile("bamboo", 3, false);
-		Tile tile4 = new Tile("bamboo", 4, false);
-		Tile tile5 = new Tile("bamboo", 5, false);
-		Tile tile6 = new Tile("bamboo", 6, false);
-		Tile tile7 = new Tile("bamboo", 7, false);
-		Tile tile8 = new Tile("bamboo", 8, false);
-		Tile tile9 = new Tile("bamboo", 8, false);
-		Tile tile10 = new Tile("dragon", 1, true);
-		Tile tile11 = new Tile("dragon", 2, false);
-		Tile tile12 = new Tile("dragon", 3, false);
-		Tile tile13 = new Tile("dragon", 4, true);
-		Tile tile14 = new Tile("wind", 1, true);
+		Tile tile1 = center.getFirstTile();
+		center.removeFromCenter();
+		Tile tile2 = center.getFirstTile();
+		center.removeFromCenter();
+		Tile tile3 = center.getFirstTile();
+		center.removeFromCenter();
+		Tile tile4 = center.getFirstTile();
+		center.removeFromCenter();
+		Tile tile5 = center.getFirstTile();
+		center.removeFromCenter();
+		Tile tile6 = center.getFirstTile();
+		center.removeFromCenter();
+		Tile tile7 = center.getFirstTile();
+		center.removeFromCenter();
+		Tile tile8 = center.getFirstTile();
+		center.removeFromCenter();
+		Tile tile9 = center.getFirstTile();
+		center.removeFromCenter();
+		Tile tile10 = center.getFirstTile();
+		center.removeFromCenter();
+		Tile tile11 = center.getFirstTile();
+		center.removeFromCenter();
+		Tile tile12 = center.getFirstTile();
+		center.removeFromCenter();
+		Tile tile13 = center.getFirstTile();
+		center.removeFromCenter();
+		Tile tile14 = center.getFirstTile();
+		center.removeFromCenter();
 		
 		hand.addTile(tile1);
 		hand.addTile(tile2);
@@ -75,6 +89,13 @@ public class ChatServer extends AbstractServer {
 		hand.addTile(tile13);
 		hand.addTile(tile14);
 		
+		ArrayList<Tile> newHand = hand.sort(hand);
+		
+		hand.setHand(newHand);
+		
+		for(Tile tile : hand.getTile()) {
+			System.out.println(tile.getSuit() + " " + tile.getNumber());
+		}
 		boolean game = false;
 		
 		game = yaku.checkWin(hand);
