@@ -46,5 +46,8 @@ public class Tile implements Serializable{
 		setTerminal(terminal);
 	}
 
-	// public getTile() {
+	public int compareTo(Tile o)
+	{
+	     return(number - o.number);
+	}
 }
