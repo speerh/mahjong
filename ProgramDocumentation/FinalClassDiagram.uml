@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_XCiRkP__Ee66QPnukVl3fQ" name="ProgramDocumentation">
+  <packageImport xmi:type="uml:PackageImport" xmi:id="_XF5uoP__Ee66QPnukVl3fQ">
+    <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+  </packageImport>
+  <packagedElement xmi:type="uml:Class" xmi:id="_IjagIAAAEe-6QPnukVl3fQ" name="Tile" visibility="public">
+    <generalization xmi:type="uml:Generalization" xmi:id="_IjagIQAAEe-6QPnukVl3fQ">
+      <general xmi:type="uml:Class" href="../../ClassDiagrams/model.uml#_3iyOBBcpEeiw04JpNeJnEA"/>
+    </generalization>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_IjagIgAAEe-6QPnukVl3fQ" name="client">
+      <type xmi:type="uml:OpaqueBehavior" href="../../ClassDiagrams/model.uml#_3hJPQhcpEeiw04JpNeJnEA"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_xmrpMAAAEe-6QPnukVl3fQ" name="suit">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_B3ZeoAABEe-6QPnukVl3fQ" name="number">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_FwkvoAABEe-6QPnukVl3fQ" name="Terminal">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+    </ownedAttribute>
+    <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_IjagIwAAEe-6QPnukVl3fQ" name="getUser">
+      <language>JAVA</language>
+      <body>&#xD;
+    return user;&#xD;
+</body>
+    </ownedBehavior>
+    <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_IjagJAAAEe-6QPnukVl3fQ" name="setUser">
+      <language>JAVA</language>
+      <body>&#xD;
+    this.user = user;&#xD;
+</body>
+    </ownedBehavior>
+    <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_IjagJQAAEe-6QPnukVl3fQ" name="ClientGUI">
+      <language>JAVA</language>
+      <body>&#xD;
+    // Set up the chat client.&#xD;
+    client = new ChatClient();&#xD;
+    client.setHost(&quot;localhost&quot;);&#xD;
+    client.setPort(8300);&#xD;
+    try {&#xD;
+        client.openConnection();&#xD;
+    } catch (IOException e) {&#xD;
+        e.printStackTrace();&#xD;
+    }&#xD;
+    // Set the title and default close operation.&#xD;
+    this.setTitle(&quot;Chat Client&quot;);&#xD;
+    this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);&#xD;
+    // Create the card layout container.&#xD;
+    container = new JPanel(cardLayout);&#xD;
+    // Create the four views.&#xD;
+    view1 = new InitialPanel(container);&#xD;
+    view2 = new LoginPanel(container, client);&#xD;
+    view3 = new CreateAccountPanel(container, client);&#xD;
+    view4 = new ContactsPanel(container);&#xD;
+    // Add the views to the card layout container.&#xD;
+    container.add(view1, &quot;1&quot;);&#xD;
+    container.add(view2, &quot;2&quot;);&#xD;
+    container.add(view3, &quot;3&quot;);&#xD;
+    container.add(view4, &quot;4&quot;);&#xD;
+    // Show the initial view in the card layout.&#xD;
+    cardLayout.show(container, &quot;1&quot;);&#xD;
+    // Add the card layout container to the JFrame.&#xD;
+    // GridBagLayout makes the container stay centered in the window.&#xD;
+    this.setLayout(new GridBagLayout());&#xD;
+    this.add(container);&#xD;
+    // Show the JFrame.&#xD;
+    this.setSize(550, 350);&#xD;
+    this.setVisible(true);&#xD;
+</body>
+    </ownedBehavior>
+    <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_IjagJgAAEe-6QPnukVl3fQ" name="main">
+      <language>JAVA</language>
+      <body>&#xD;
+    new ClientGUI();&#xD;
+</body>
+    </ownedBehavior>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_IjagJwAAEe-6QPnukVl3fQ" name="main">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_IjagKAAAEe-6QPnukVl3fQ" name="args">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_WJVGwAABEe-6QPnukVl3fQ" name="getSuit"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_YDMLYAABEe-6QPnukVl3fQ" name="getNumber"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_YwbE0AABEe-6QPnukVl3fQ" name="getTerminal"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_ZZWGAAABEe-6QPnukVl3fQ" name="setSuit">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_gIv9QAABEe-6QPnukVl3fQ" name="suit">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_1F5FkAABEe-6QPnukVl3fQ" name="setNumber">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_4Md08AABEe-6QPnukVl3fQ" name="number">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_5C0OIAABEe-6QPnukVl3fQ" name="setTerminal">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_6h7QcAABEe-6QPnukVl3fQ" name="terminal">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="__tJ_MAABEe-6QPnukVl3fQ" name="setTile">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_BlXeAAACEe-6QPnukVl3fQ" name="suit">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedParameter>
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_Ejxv4AACEe-6QPnukVl3fQ" name="num">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedParameter>
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_Gm6sUAACEe-6QPnukVl3fQ" name="terminal">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+      </ownedParameter>
+    </ownedOperation>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_FGzvAAADEe-6QPnukVl3fQ" name="Hand">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_HjqL8AADEe-6QPnukVl3fQ" name="tiles" type="_IjagIAAAEe-6QPnukVl3fQ"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_KN1TMAADEe-6QPnukVl3fQ" name="discards" type="_IjagIAAAEe-6QPnukVl3fQ"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_M_VKcAADEe-6QPnukVl3fQ" name="getTile">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_e7kGgAADEe-6QPnukVl3fQ" name="tiles" type="_IjagIAAAEe-6QPnukVl3fQ" direction="return"/>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_giAf4AADEe-6QPnukVl3fQ" name="addTile">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_j7b50AADEe-6QPnukVl3fQ" name="tile" type="_IjagIAAAEe-6QPnukVl3fQ"/>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_k3yNUAADEe-6QPnukVl3fQ" name="removeTile">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_nAbU0AADEe-6QPnukVl3fQ" name="pos">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_s-sDAAADEe-6QPnukVl3fQ" name="getDiscards">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_xTjKcAADEe-6QPnukVl3fQ" type="_IjagIAAAEe-6QPnukVl3fQ" direction="return"/>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_0sI24AADEe-6QPnukVl3fQ" name="removeDiscards">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_0sI24QADEe-6QPnukVl3fQ" name="pos">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedParameter>
+    </ownedOperation>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_8VfN4AADEe-6QPnukVl3fQ" visibility="private" memberEnd="_8Vf08gADEe-6QPnukVl3fQ _8Vf08wADEe-6QPnukVl3fQ">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_8Vf08AADEe-6QPnukVl3fQ" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_8Vf08QADEe-6QPnukVl3fQ" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_8Vf08wADEe-6QPnukVl3fQ" type="_FGzvAAADEe-6QPnukVl3fQ" association="_8VfN4AADEe-6QPnukVl3fQ"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_8Vf08gADEe-6QPnukVl3fQ" type="_IjagIAAAEe-6QPnukVl3fQ" association="_8VfN4AADEe-6QPnukVl3fQ"/>
+  </packagedElement>
+</uml:Model>
