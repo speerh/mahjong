@@ -29,6 +29,13 @@ public class GameControl implements ActionListener
     }
     else {
     	//REMOVE ENTRY FROM ARRAYLIST BASED OFF OF ITERATOR
+    	//ADD IN DRAWN TILE
     }
+  }
+  
+  public void setHand(Hand in) {
+	  client.updateHand(in);
+	  GamePanel gamePanel = (GamePanel)container.getComponent(4);
+	  gamePanel.setHand(in);
   }
 }

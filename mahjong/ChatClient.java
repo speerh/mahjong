@@ -7,6 +7,8 @@ public class ChatClient extends AbstractClient
   // Private data fields for storing the GUI controllers.
   private LoginControl loginControl;
   private CreateAccountControl createAccountControl;
+  private GameControl gameControl;
+  private Hand hand;
 
   // Setters for the GUI controllers.
   public void setLoginControl(LoginControl loginControl)
@@ -16,6 +18,9 @@ public class ChatClient extends AbstractClient
   public void setCreateAccountControl(CreateAccountControl createAccountControl)
   {
     this.createAccountControl = createAccountControl;
+  }
+  public void setGameControl(GameControl in) {
+	  gameControl = in;
   }
 
   // Constructor for initializing the client with default settings.
@@ -45,6 +50,11 @@ public class ChatClient extends AbstractClient
       {
         createAccountControl.createAccountSuccess();
       }
+      
+    }
+    //if msg is hand
+    else if(arg0 instanceof Hand) {
+  	  gameControl.setHand((Hand)arg0);
     }
     
     // If we received an Error, figure out where to display it.
@@ -65,5 +75,10 @@ public class ChatClient extends AbstractClient
         createAccountControl.displayError(error.getMessage());
       }
     }
-  }  
+  }
+  
+  public void updateHand(Hand in) {
+	  hand = in;
+	  
+  }
 }

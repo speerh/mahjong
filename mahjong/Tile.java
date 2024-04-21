@@ -1,6 +1,8 @@
 package mahjong;
 
-public class Tile {
+import java.io.Serializable;
+
+public class Tile implements Serializable{
 	private String suit;
 	private int number;
 	private Boolean terminal;

@@ -1,8 +1,9 @@
 package mahjong;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
-public class Hand {
+public class Hand implements Serializable{
 	public ArrayList<Tile> tiles = new ArrayList<Tile>();
 	public ArrayList<Tile> discards = new ArrayList<Tile>();
 	

@@ -15,14 +15,14 @@ public class ClientGUI extends JFrame
    ChatClient client = new ChatClient();
     client.setHost("localhost");
     client.setPort(8300);
-    /*try
+    try
     {
-      //client.openConnection();
+      client.openConnection();
     }
     catch (IOException e)
     {
       e.printStackTrace();
-    }*/
+    }
     
     
     // Set the title and default close operation.
@@ -36,26 +36,30 @@ public class ClientGUI extends JFrame
     
     //Create the Controllers next
     //Next, create the Controllers
-    GameControl ic = new GameControl(container,client);
+    InitialControl ic = new InitialControl(container, client);
+    GameControl gc = new GameControl(container,client);
     LoginControl lc = new LoginControl(container,client);
     CreateAccountControl cac = new CreateAccountControl(container,client);
+    
     
     //Set the client info
     client.setLoginControl(lc);
     client.setCreateAccountControl(cac);
+    client.setGameControl(gc);
    
     
     // Create the four views. (need the controller to register with the Panels
-    JPanel view1 = new GamePanel(ic);
+    JPanel view1 = new InitialPanel(ic);
     JPanel view2 = new LoginPanel(lc);
     JPanel view3 = new CreateAccountPanel(cac);
     JPanel view4 = new ContactsPanel();
+    JPanel view5 = new GamePanel(gc);
     
     // Add the views to the card layout container.
     container.add(view1, "1");
     container.add(view2, "2");
     container.add(view3, "3");
-    container.add(view4, "4");
+    container.add(view5, "4");
    
     
     // Show the initial view in the card layout.

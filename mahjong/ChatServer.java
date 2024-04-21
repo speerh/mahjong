@@ -101,6 +101,12 @@ public class ChatServer extends AbstractServer {
 
 	public void clientConnected(ConnectionToClient client) {
 		log.append("Client " + client.getId() + " connected\n");
+		try {
+			client.sendToClient(hand);
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 
 	public void handleMessageFromClient(Object arg0, ConnectionToClient arg1) {

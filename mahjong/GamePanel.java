@@ -1,3 +1,4 @@
+//hannah speer
 package mahjong;
 
 import java.awt.*;
@@ -7,11 +8,28 @@ import javax.swing.*;
 
 public class GamePanel extends JPanel
 {
+	Hand hand = new Hand();
+	//init hand for test data
+	
+	
   // Constructor for the initial panel.
   public GamePanel(GameControl gc)
   {
+	  hand.addTile(new Tile("wind", 3, true));
+	  hand.addTile(new Tile("wind", 3, true));
+		hand.addTile(new Tile("wind", 3, true));
+		hand.addTile(new Tile("wind", 3, true));
+		hand.addTile(new Tile("wind", 3, true));
+		hand.addTile(new Tile("wind", 3, true));
+		hand.addTile(new Tile("wind", 3, true));
+		hand.addTile(new Tile("wind", 3, true));
+		hand.addTile(new Tile("wind", 3, true));
+		hand.addTile(new Tile("wind", 3, true));
+		hand.addTile(new Tile("wind", 3, true));
+		hand.addTile(new Tile("wind", 3, true));
+		hand.addTile(new Tile("wind", 3, true));
 	  //static array for tile testing
-	  String testData[] = new String[] {"character6","bamboo9", "bamboo7", "circle1", "circle2", "circle2", "wind3", "wind2", "circle2", "bamboo5", "character7", "bamboo1", "dragon2"};
+	String testData[] = new String[] {"character6","bamboo9", "bamboo7", "circle1", "circle2", "circle2", "wind3", "wind2", "circle2", "bamboo5", "character7", "bamboo1", "dragon2"};
     // Create the controller.
     //InitialControl controller = new InitialControl(container);
 	  
@@ -26,10 +44,11 @@ public class GamePanel extends JPanel
 	    	p2Hand.add(temp);
 	    }
 	  
+	  
 	  JPanel p2Discards = new JPanel();
 	  p2Discards.setOpaque(false);
 	  for (int i = 0; i < 3; i++) {
-	    	JLabel temp = new JLabel(new ImageIcon("images/" + testData[i] + ".png"));
+	    	JLabel temp = new JLabel(new ImageIcon("images/" + hand.getTile().get(i) + ".png"));
 	    	temp.setSize(new Dimension(45, 54));
 	    	p2Discards.add(temp);
 	    }
@@ -58,13 +77,13 @@ public class GamePanel extends JPanel
     ArrayList<JButton> tileButtons = new ArrayList();
     //loop to add buttons-- ADD WHEN HAND INTEGRATED
     for (int i = 0; i < 13; i++) {
-    	JButton temp = new JButton(new ImageIcon("images/" + testData[i] + ".png"));
+    	JButton temp = new JButton(new ImageIcon("images/" + hand.getTile().get(i) + ".png"));
     	temp.setContentAreaFilled(false);
     	temp.setBorderPainted( false );
     	temp.setSize(new Dimension(45, 54));
     	//this errors out, ignore it (it works and runs)
     	temp.setBorder(null);
-    	temp.setToolTipText(testData[i]);
+    	temp.setToolTipText(hand.getTile().get(i).getSuit() + " " + hand.getTile().get(i).getNumber());
     	temp.setActionCommand("" + i);
     	temp.addActionListener(gc);
     	tileButtons.add(temp);
@@ -90,4 +109,9 @@ public class GamePanel extends JPanel
     this.add(grid);
     this.setBackground(new Color(103, 128, 101));
   }
+  
+  public void setHand(Hand in) {
+	  hand = in;
+  }
+  
 }
