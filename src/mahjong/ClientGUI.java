@@ -36,7 +36,7 @@ public class ClientGUI extends JFrame
     
     //Create the Controllers next
     //Next, create the Controllers
-    InitialControl ic = new InitialControl(container,client);
+    GameControl ic = new GameControl(container,client);
     LoginControl lc = new LoginControl(container,client);
     CreateAccountControl cac = new CreateAccountControl(container,client);
     
@@ -46,7 +46,7 @@ public class ClientGUI extends JFrame
    
     
     // Create the four views. (need the controller to register with the Panels
-    JPanel view1 = new InitialPanel(ic);
+    JPanel view1 = new GamePanel(ic);
     JPanel view2 = new LoginPanel(lc);
     JPanel view3 = new CreateAccountPanel(cac);
     JPanel view4 = new ContactsPanel();
