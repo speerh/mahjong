@@ -17,6 +17,9 @@ public class ChatServer extends AbstractServer {
 	private Database database = new Database();
 	private String dml;
 	private Center center = new Center();
+	private Hand hand = new Hand();
+	private Yaku yaku = new Yaku();
+	
 
 	// Constructor
 	public ChatServer() {
@@ -41,6 +44,43 @@ public class ChatServer extends AbstractServer {
 		status.setText("Listening");
 		status.setForeground(Color.GREEN);
 		log.append("Server started\n");
+		
+		Tile tile1 = new Tile("bamboo", 2, false);
+		Tile tile2 = new Tile("bamboo", 2, false);
+		Tile tile3 = new Tile("bamboo", 3, false);
+		Tile tile4 = new Tile("bamboo", 4, false);
+		Tile tile5 = new Tile("bamboo", 5, false);
+		Tile tile6 = new Tile("bamboo", 6, false);
+		Tile tile7 = new Tile("bamboo", 7, false);
+		Tile tile8 = new Tile("bamboo", 8, false);
+		Tile tile9 = new Tile("bamboo", 8, false);
+		Tile tile10 = new Tile("dragon", 1, true);
+		Tile tile11 = new Tile("dragon", 2, false);
+		Tile tile12 = new Tile("dragon", 3, false);
+		Tile tile13 = new Tile("dragon", 4, true);
+		Tile tile14 = new Tile("wind", 1, true);
+		
+		hand.addTile(tile1);
+		hand.addTile(tile2);
+		hand.addTile(tile3);
+		hand.addTile(tile4);
+		hand.addTile(tile5);
+		hand.addTile(tile6);
+		hand.addTile(tile7);
+		hand.addTile(tile8);
+		hand.addTile(tile9);
+		hand.addTile(tile10);
+		hand.addTile(tile11);
+		hand.addTile(tile12);
+		hand.addTile(tile13);
+		hand.addTile(tile14);
+		
+		boolean game = false;
+		
+		game = yaku.checkWin(hand);
+		
+		System.out.println("Does Hand Win?: " + game);
+		
 //		Tile tile = center.getFirstTile();
 //		String str = tile.getSuit();
 //		log.append(str);

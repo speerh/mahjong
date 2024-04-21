@@ -3,8 +3,8 @@ package mahjong;
 import java.util.ArrayList;
 
 public class Hand {
-	public ArrayList<Tile> tiles;
-	public ArrayList<Tile> discards;
+	public ArrayList<Tile> tiles = new ArrayList<Tile>();
+	public ArrayList<Tile> discards = new ArrayList<Tile>();
 	
 	public ArrayList<Tile> getTile(){
 		return tiles;

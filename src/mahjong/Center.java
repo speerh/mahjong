@@ -18,7 +18,6 @@ public class Center {
 	public static void addToArrayList(String arr[])
     {
 		
-		
         for (int i = 0; i < 4; i++) {
         	 for (int j = 0; j < arr.length; j++) {
         		 
@@ -67,10 +66,6 @@ public class Center {
 		
 		addToArrayList(originalTiles);
 		Collections.shuffle(centerTiles);
-		
-		for(Tile tile : centerTiles) {
-		     System.out.println(tile.getSuit() + " " + tile.getNumber() + " " + tile.getTerminal());
-		 }
 		
 	}
 }

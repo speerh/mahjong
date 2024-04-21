@@ -11,7 +11,7 @@ public class Yaku {
 	private Integer num;
 	private ArrayList<String> newTiles = new ArrayList<String>();
 
-	public void checkWin(Hand hand) {
+	public boolean checkWin(Hand hand) {
 
 		for (Tile tile : hand.getTile()) {
 			suit = tile.getSuit();
@@ -132,5 +132,6 @@ public class Yaku {
 			}
 
 		}
+		return win;
 	}
 }
