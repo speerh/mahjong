@@ -20,11 +20,41 @@ public class Yaku {
 			newTiles.add(suit + num);
 		}
 		// Tanyao - hand does not contain terminals, 1's or 9s
-		String[] Tanyao = { "bamboo2", "bamboo3", "bamboo4", "bamboo5", "bamboo6", "bamboo7", "bamboo8", "character2",
-				"character3", "character4", "character5", "character6", "character7", "character8", "circle2",
-				"circle3", "circle4", "circle5", "circle6", "circle7", "circle8" };
+		String[] TanyaoBamboo = { "bamboo2", "bamboo3", "bamboo4", "bamboo5", "bamboo6", "bamboo7", "bamboo8" };
 
-		for (String item : Tanyao) {
+		for (String item : TanyaoBamboo) {
+			if (!newTiles.contains(item)) {
+				win = false;
+				break;
+			} else {
+				name = "Tanyao";
+				points = 40;
+				win = true;
+				break;
+
+			}
+		}
+		// Tanyao - hand does not contain terminals, 1's or 9s
+		String[] TanyaoChar = { "character2", "character3", "character4", "character5", "character6", "character7",
+				"character8", };
+
+		for (String item : TanyaoChar) {
+			if (!newTiles.contains(item)) {
+				win = false;
+				break;
+			} else {
+				name = "Tanyao";
+				points = 40;
+				win = true;
+				break;
+
+			}
+		}
+
+		// Tanyao - hand does not contain terminals, 1's or 9s
+		String[] TanyaoCircle = { "circle2", "circle3", "circle4", "circle5", "circle6", "circle7", "circle8" };
+
+		for (String item : TanyaoCircle) {
 			if (!newTiles.contains(item)) {
 				win = false;
 				break;
