@@ -230,12 +230,10 @@ public class ChatServer extends AbstractServer {
 		//the server needs to validate that hand and send "WIN" back to that client, "LOSE" back to the other client to signify end of game
 		//this can be arg0 instanceof hand because I think it's the only time that we send a hand obj
 		//99% of the time this SHOULD result in game end because i don't see any reason why yaku would trigger a win clientside and not the same win serverside
-		else if (arg0 instanceof Integer) {
-			int index = (int)arg0;
+		else if (arg0 instanceof Tile) {
 			Tile tile = new Tile("", 1, false);
 			
-			tile = center.getFirstTile();
-			center.removeFromCenter();
+			tile = (Tile) arg0;
 			
 			if (arg1 == client1) {
 				try {
