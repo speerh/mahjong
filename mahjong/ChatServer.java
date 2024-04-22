@@ -141,12 +141,7 @@ public class ChatServer extends AbstractServer {
 
 	public void clientConnected(ConnectionToClient client) {
 		log.append("Client " + client.getId() + " connected\n");
-		try {
-			client.sendToClient(hand);
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+		
 	}
 
 	public void handleMessageFromClient(Object arg0, ConnectionToClient arg1) {
@@ -163,6 +158,12 @@ public class ChatServer extends AbstractServer {
 			if (results != null){
 				result = "LoginSuccessful";
 				log.append("Client " + arg1.getId() + " successfully logged in as " + data.getUsername() + "\n");
+				try {
+					arg1.sendToClient(hand);
+				} catch (IOException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
 			}
 			else{
 				System.out.println("Error executing query.");

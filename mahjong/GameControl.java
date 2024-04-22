@@ -19,23 +19,30 @@ public class GameControl implements ActionListener
   // Handle button clicks.
   public void actionPerformed(ActionEvent ae)
   {
+	  GamePanel gamePanel = (GamePanel)container.getComponent(3);
     // Get the name of the button clicked.
     String command = ae.getActionCommand();
     
     System.out.println(command);
     
-    if(command.equals("d")) {
-    	//DISCARD DRAW
+    if(command.equalsIgnoreCase("d")) {
+    	//DISCARD 	
+    	gamePanel.discardDraw();
     }
     else {
+    	int index = Integer.parseInt(ae.getActionCommand());
     	//REMOVE ENTRY FROM ARRAYLIST BASED OFF OF ITERATOR
+    	gamePanel.hand.removeTile(index);
     	//ADD IN DRAWN TILE
+    	gamePanel.hand.addTile(gamePanel.getDraw());
+    	gamePanel.drawHand();
     }
   }
   
   public void setHand(Hand in) {
 	  client.updateHand(in);
-	  GamePanel gamePanel = (GamePanel)container.getComponent(4);
+	  GamePanel gamePanel = (GamePanel)container.getComponent(3);
 	  gamePanel.setHand(in);
+	  System.out.println("HAND UPDATED");
   }
 }

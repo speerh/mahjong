@@ -37,7 +37,7 @@ public class ClientGUI extends JFrame
     //Create the Controllers next
     //Next, create the Controllers
     InitialControl ic = new InitialControl(container, client);
-    GameControl gc = new GameControl(container,client);
+    GameControl gc = new GameControl(container, client);
     LoginControl lc = new LoginControl(container,client);
     CreateAccountControl cac = new CreateAccountControl(container,client);
     

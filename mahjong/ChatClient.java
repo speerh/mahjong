@@ -79,6 +79,5 @@ public class ChatClient extends AbstractClient
   
   public void updateHand(Hand in) {
 	  hand = in;
-	  
   }
 }

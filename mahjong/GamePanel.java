@@ -8,13 +8,18 @@ import javax.swing.*;
 
 public class GamePanel extends JPanel
 {
-	Hand hand = new Hand();
+	public Hand hand = new Hand();
+	GameControl gc;
+	JPanel handPanel, playerDiscards, handDrawPanel;
+	JButton handDraw;
+	Tile drawn = new Tile("dragon", 3, true);
 	//init hand for test data
 	
 	
   // Constructor for the initial panel.
   public GamePanel(GameControl gc)
   {
+	  this.gc = gc;
 	  hand.addTile(new Tile("wind", 3, true));
 	  hand.addTile(new Tile("wind", 3, true));
 		hand.addTile(new Tile("wind", 3, true));
@@ -60,40 +65,28 @@ public class GamePanel extends JPanel
 	  centerTiles.add(centerTile);
 	  
 	//P1 DISCARDS--------------------------------------------------------------------
-	  JPanel playerDiscards = new JPanel();
+	  playerDiscards = new JPanel();
 	  playerDiscards.setOpaque(false);
-	  for (int i = 0; i < 3; i++) {
-	    	JLabel temp = new JLabel(new ImageIcon("images/" + testData[i] + ".png"));
-	    	temp.setSize(new Dimension(45, 54));
-	    	playerDiscards.add(temp);
-	    }
+	  drawDiscards();
+	  
 	  
     
     //HAND RENDERING-----------------------------------------------------------------
-    JPanel handPanel = new JPanel();
+    handPanel = new JPanel();
     handPanel.setOpaque(false);
     handPanel.setLayout(new BoxLayout(handPanel, BoxLayout.X_AXIS));
     //loginButtonBuffer.add(test1);
-    ArrayList<JButton> tileButtons = new ArrayList();
-    //loop to add buttons-- ADD WHEN HAND INTEGRATED
-    for (int i = 0; i < 13; i++) {
-    	JButton temp = new JButton(new ImageIcon("images/" + hand.getTile().get(i) + ".png"));
-    	temp.setContentAreaFilled(false);
-    	temp.setBorderPainted( false );
-    	temp.setSize(new Dimension(45, 54));
-    	//this errors out, ignore it (it works and runs)
-    	temp.setBorder(null);
-    	temp.setToolTipText(hand.getTile().get(i).getSuit() + " " + hand.getTile().get(i).getNumber());
-    	temp.setActionCommand("" + i);
-    	temp.addActionListener(gc);
-    	tileButtons.add(temp);
-    	handPanel.add(temp);
-    }
+    
     //HAND DRAW RENDERING--
-	JButton handDraw = new JButton(new ImageIcon("images/wind3.png"));
+    handDrawPanel = new JPanel();
+    String fn = this.getDraw().getSuit()+ this.getDraw().getNumber() + ".png";
+    System.out.println(fn);
+	handDraw = new JButton(new ImageIcon("images/" + this.getDraw().getSuit()+ this.getDraw().getNumber() + ".png"));
+	handDraw.addActionListener(gc);
 	handDraw.setContentAreaFilled(false);
 	handDraw.setBorderPainted(false);
 	handDraw.setActionCommand("d");
+	handDrawPanel.add(handDraw);
 	
 	
 
@@ -105,13 +98,59 @@ public class GamePanel extends JPanel
     grid.add(centerTiles);
     grid.add(playerDiscards);
     grid.add(handPanel);
-    grid.add(handDraw);
+    grid.add(handDrawPanel);
     this.add(grid);
     this.setBackground(new Color(103, 128, 101));
   }
   
   public void setHand(Hand in) {
 	  hand = in;
+	  drawHand();
+	 
+  }
+  
+  public void drawHand() {
+	  handPanel.removeAll();
+	  ArrayList<JButton> tileButtons = new ArrayList();
+	    //loop to add buttons-- ADD WHEN HAND INTEGRATED
+	    for (int i = 0; i < 13; i++) {
+	    	JButton temp = new JButton(new ImageIcon("images/" + hand.getTile().get(i).getSuit() + hand.getTile().get(i).getNumber() + ".png"));
+	    	temp.setContentAreaFilled(false);
+	    	temp.setBorderPainted( false );
+	    	temp.setSize(new Dimension(45, 54));
+	    	//this errors out, ignore it (it works and runs)
+	    	temp.setBorder(null);
+	    	temp.setToolTipText(hand.getTile().get(i).getSuit() + " " + hand.getTile().get(i).getNumber());
+	    	temp.setActionCommand("" + i);
+	    	temp.addActionListener(gc);
+	    	tileButtons.add(temp);
+	    	handPanel.add(temp);
+	    }
+	    handPanel.revalidate();
+	    
+  }
+  
+  public void setDraw(Tile in) {
+	  drawn = in;
+  }
+  
+  public Tile getDraw() {
+	  return drawn;
+  }
+  public void discardDraw() {
+	  System.out.println("--------------------");
+	  handDraw.setVisible(false);
+	  handDrawPanel.setVisible(false);
+	  handDrawPanel.revalidate();
+	  
+  }
+  public void drawDiscards() {
+	  for (int i = 0; i < 3; i++) {
+	    	JLabel temp = new JLabel(new ImageIcon("images/" + hand.discards + ".png"));
+	    	temp.setSize(new Dimension(45, 54));
+	    	playerDiscards.add(temp);
+	    }
+	  playerDiscards.revalidate();
   }
   
 }
