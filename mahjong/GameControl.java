@@ -3,6 +3,7 @@ package mahjong;
 import java.awt.*;
 import javax.swing.*;
 import java.awt.event.*;
+import java.io.IOException;
 
 public class GameControl implements ActionListener
 {
@@ -28,14 +29,32 @@ public class GameControl implements ActionListener
     if(command.equalsIgnoreCase("d")) {
     	//DISCARD 	
     	gamePanel.discardDraw();
+    	//send discard to server
+    	try {
+			client.sendToServer("d");
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+    	
     }
     else {
     	int index = Integer.parseInt(ae.getActionCommand());
+    	//send tile to server
     	//REMOVE ENTRY FROM ARRAYLIST BASED OFF OF ITERATOR
+    	try {
+			client.sendToServer(gamePanel.hand.getTile().get(index));
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
     	gamePanel.hand.removeTile(index);
     	//ADD IN DRAWN TILE
     	gamePanel.hand.addTile(gamePanel.getDraw());
     	gamePanel.drawHand();
+    	gamePanel.disableButtons(false);
+    	
+    	
     }
   }
   

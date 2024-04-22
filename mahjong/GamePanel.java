@@ -112,7 +112,6 @@ public class GamePanel extends JPanel
   public void drawHand() {
 	  handPanel.removeAll();
 	  ArrayList<JButton> tileButtons = new ArrayList();
-	    //loop to add buttons-- ADD WHEN HAND INTEGRATED
 	    for (int i = 0; i < 13; i++) {
 	    	JButton temp = new JButton(new ImageIcon("images/" + hand.getTile().get(i).getSuit() + hand.getTile().get(i).getNumber() + ".png"));
 	    	temp.setContentAreaFilled(false);
@@ -151,6 +150,13 @@ public class GamePanel extends JPanel
 	    	playerDiscards.add(temp);
 	    }
 	  playerDiscards.revalidate();
+  }
+  public void disableButtons(boolean enable) {
+	  Component[] components = handPanel.getComponents();
+	  
+      for (Component i : components) {
+          i.setEnabled(enable);
+      }
   }
   
 }
