@@ -33,7 +33,7 @@ public class GameControl implements ActionListener
     	gamePanel.drawVisible(false);
     	//send discard to server
     	try {
-			client.sendToServer("d");
+			client.sendToServer(gamePanel.getDraw());
 			client.setTurn(false);
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
@@ -46,7 +46,10 @@ public class GameControl implements ActionListener
     	//send tile to server
     	//REMOVE ENTRY FROM ARRAYLIST BASED OFF OF ITERATOR
     	try {
+    		System.out.println("CLIENT SENDING TILE");
+    		System.out.println(gamePanel.hand.getTile().get(index).getSuit() + gamePanel.hand.getTile().get(index).getNumber());
 			client.sendToServer(gamePanel.hand.getTile().get(index));
+			client.sendToServer("TEST");
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

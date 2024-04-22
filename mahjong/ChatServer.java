@@ -147,6 +147,7 @@ public class ChatServer extends AbstractServer {
 	}
 
 	public void handleMessageFromClient(Object arg0, ConnectionToClient arg1) {
+		System.out.println(arg0);
 		if (arg0 instanceof LoginData) {
 			
 			if (client1 == null) {
@@ -174,13 +175,7 @@ public class ChatServer extends AbstractServer {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
-				//REMOVE LATER
-				try {
-					arg1.sendToClient("TURN");
-				} catch (IOException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-				}
+				
 			}
 			else{
 				System.out.println("Error executing query.");
@@ -192,6 +187,12 @@ public class ChatServer extends AbstractServer {
 				arg1.sendToClient(result);
 			} catch (IOException e) {
 				return;
+			}
+			//REMOVE LATER
+			if(client1 != null && client2 != null) {
+				//game start
+				gameStart(client1, client2);
+				
 			}
 
 		} else if (arg0 instanceof CreateAccountData) {
@@ -239,10 +240,12 @@ public class ChatServer extends AbstractServer {
 		//99% of the time this SHOULD result in game end because i don't see any reason why yaku would trigger a win clientside and not the same win serverside
 		else if (arg0 instanceof Tile) {
 			Tile tile = new Tile("", 1, false);
+			System.out.println("CLIENT SENT TILE");
 			
 			tile = (Tile) arg0;
 			
 			if (arg1 == client1) {
+				System.out.println("CLIENT1 SENT TILE");
 				//send discard to client 2
 				try {
 					client2.sendToClient(tile);
@@ -268,6 +271,7 @@ public class ChatServer extends AbstractServer {
 				}
 			}
 			else if (arg1 == client2){
+				System.out.println("CLIENT2 SENT TILE");
 				//send discard to client 1
 				try {
 					client1.sendToClient(tile);
@@ -302,5 +306,18 @@ public class ChatServer extends AbstractServer {
 		status.setForeground(Color.RED);
 		log.append("Listening exception: " + exception.getMessage() + "\n");
 		log.append("Press Listen to restart server\n");
+	}
+	
+	public void gameStart(ConnectionToClient p1, ConnectionToClient p2) {
+		Boolean gameEnd = false;
+		try {
+			p1.sendToClient("TURN");
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		while(!gameEnd) {
+		//TURN CODE HERE
+		}
 	}
 }
