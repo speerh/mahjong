@@ -174,6 +174,13 @@ public class ChatServer extends AbstractServer {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
+				//REMOVE LATER
+				try {
+					arg1.sendToClient("TURN");
+				} catch (IOException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
 			}
 			else{
 				System.out.println("Error executing query.");
@@ -236,12 +243,23 @@ public class ChatServer extends AbstractServer {
 			tile = (Tile) arg0;
 			
 			if (arg1 == client1) {
+				//send discard to client 2
 				try {
-					arg1.sendToClient("TURN");
+					client2.sendToClient(tile);
 				} catch (IOException e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
+				//send turn to client 2
+				try {
+					client2.sendToClient("TURN");
+				} catch (IOException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+				//draw for client 2, send to client
+				tile = center.getFirstTile();
+				center.removeFromCenter();
 				try {
 					client2.sendToClient(tile);
 				} catch (IOException e) {
@@ -250,12 +268,23 @@ public class ChatServer extends AbstractServer {
 				}
 			}
 			else if (arg1 == client2){
+				//send discard to client 1
 				try {
-					arg1.sendToClient("TURN");
+					client1.sendToClient(tile);
 				} catch (IOException e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
+				//send turn to client 1
+				try {
+					client1.sendToClient("TURN");
+				} catch (IOException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+				//draw for client 1, send to client
+				tile = center.getFirstTile();
+				center.removeFromCenter();
 				try {
 					client1.sendToClient(tile);
 				} catch (IOException e) {
