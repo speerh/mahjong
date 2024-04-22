@@ -9,6 +9,8 @@ public class ChatClient extends AbstractClient
   private CreateAccountControl createAccountControl;
   private GameControl gameControl;
   private Hand hand;
+  private Hand hand2;
+  private Boolean turn = false;
 
   // Setters for the GUI controllers.
   public void setLoginControl(LoginControl loginControl)
@@ -50,6 +52,11 @@ public class ChatClient extends AbstractClient
       {
         createAccountControl.createAccountSuccess();
       }
+      else if(message.equals("TURN")) {
+    	  //set player's turn to true
+    	  setTurn(true);
+    	  gameControl.setTurn(true);
+      }
       
     }
     //if msg is hand
@@ -75,9 +82,29 @@ public class ChatClient extends AbstractClient
         createAccountControl.displayError(error.getMessage());
       }
     }
+    else if(arg0 instanceof Tile) {
+    	//is player turn?
+    	if(getTurn()) {
+    		//if turn, this tile is the drawn tile
+    		//update drawn tile
+    		
+    	}
+    	else if(!getTurn()) {
+    		//if NOT turn, this is the other player's discard
+    		//add to other player discard
+    	}
+    }
   }
   
   public void updateHand(Hand in) {
 	  hand = in;
+  }
+  
+  public void setTurn(Boolean in) {
+	  turn = in;
+	  
+  }
+  public Boolean getTurn() {
+	  return turn;
   }
 }

@@ -125,6 +125,7 @@ public class GamePanel extends JPanel
 	    	tileButtons.add(temp);
 	    	handPanel.add(temp);
 	    }
+	    enableButtons(gc.getTurn());
 	    handPanel.revalidate();
 	    
   }
@@ -136,10 +137,9 @@ public class GamePanel extends JPanel
   public Tile getDraw() {
 	  return drawn;
   }
-  public void discardDraw() {
-	  System.out.println("--------------------");
-	  handDraw.setVisible(false);
-	  handDrawPanel.setVisible(false);
+  public void drawVisible(Boolean in) {
+	  handDraw.setVisible(in);
+	  //handDrawPanel.setVisible(false);
 	  handDrawPanel.revalidate();
 	  
   }
@@ -151,11 +151,14 @@ public class GamePanel extends JPanel
 	    }
 	  playerDiscards.revalidate();
   }
-  public void disableButtons(boolean enable) {
+  public void enableButtons(boolean enable) {
 	  Component[] components = handPanel.getComponents();
 	  
       for (Component i : components) {
           i.setEnabled(enable);
+      }
+      if(!enable) {
+    	  drawVisible(false);
       }
   }
   

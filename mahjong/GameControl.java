@@ -10,6 +10,7 @@ public class GameControl implements ActionListener
   // Private data field for storing the container.
   private JPanel container;
   private ChatClient client;
+  private Boolean turn = false;
   // Constructor for the initial controller.
   public GameControl(JPanel container, ChatClient client)
   {
@@ -28,10 +29,12 @@ public class GameControl implements ActionListener
     
     if(command.equalsIgnoreCase("d")) {
     	//DISCARD 	
-    	gamePanel.discardDraw();
+    	//make discard invis
+    	gamePanel.drawVisible(false);
     	//send discard to server
     	try {
 			client.sendToServer("d");
+			client.setTurn(false);
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -52,7 +55,8 @@ public class GameControl implements ActionListener
     	//ADD IN DRAWN TILE
     	gamePanel.hand.addTile(gamePanel.getDraw());
     	gamePanel.drawHand();
-    	gamePanel.disableButtons(false);
+    	gamePanel.enableButtons(false);
+    	client.setTurn(false);
     	
     	
     }
@@ -64,4 +68,17 @@ public class GameControl implements ActionListener
 	  gamePanel.setHand(in);
 	  System.out.println("HAND UPDATED");
   }
+  
+  public void setTurn(Boolean in) {
+	  GamePanel gamePanel = (GamePanel)container.getComponent(3);
+	  turn = in;
+	  gamePanel.enableButtons(turn);
+	  
+	  
+  }
+  public Boolean getTurn() {
+	  return turn;
+  }
+  
+  
 }
