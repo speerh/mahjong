@@ -71,9 +71,9 @@ public class ClientGUI extends JFrame
     this.add(container);
 
     // Show the JFrame.
-    this.setSize(550, 350);
+    this.setSize(720, 500);
     this.setVisible(true);
-    this.getContentPane().setBackground(Color.GREEN);
+    this.getContentPane().setBackground(new Color(103, 128, 101));
     
   }
 

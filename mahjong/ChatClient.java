@@ -1,5 +1,7 @@
 package mahjong;
 
+import java.io.IOException;
+
 import ocsf.client.AbstractClient;
 
 public class ChatClient extends AbstractClient
@@ -11,6 +13,7 @@ public class ChatClient extends AbstractClient
   private Hand hand;
   private Hand hand2;
   private Boolean turn = false;
+  private Yaku check;
 
   // Setters for the GUI controllers.
   public void setLoginControl(LoginControl loginControl)
@@ -85,6 +88,20 @@ public class ChatClient extends AbstractClient
     else if(arg0 instanceof Tile) {
     	//is player turn?
     	if(getTurn()) {
+    		Hand test = hand;
+    		test.addTile((Tile) arg0);
+    		if(check.checkWin(test)) {
+    			//send win to server
+    			try {
+					this.sendToServer(hand);
+				} catch (IOException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+    			//verify win
+    			//end game
+    		}
+    		
     		//if turn, this tile is the drawn tile
     		//update drawn tile
     		

@@ -69,12 +69,15 @@ public class LoginPanel extends JPanel
 
     // Arrange the three panels in a grid.
     JPanel grid = new JPanel(new GridLayout(3, 1, 0, 10));
-    grid.setOpaque(true);
+    grid.setOpaque(false);
+    labelPanel.setOpaque(false);
+    loginPanel.setOpaque(false);
+    buttonPanel.setOpaque(false);
     grid.add(labelPanel);
     grid.add(loginPanel);
     grid.add(buttonPanel);
     this.add(grid);
-    this.setBackground(Color.green);
+    this.setBackground(new Color(103, 128, 101));
    
   }
 }
