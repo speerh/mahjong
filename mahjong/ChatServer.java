@@ -211,6 +211,25 @@ public class ChatServer extends AbstractServer {
 				return;
 			}
 		}
+		//this needs to be instanceof Tile
+		//all this does is relay tile -> the other client and signify turn over for that client
+		//maybe use an iterator to process turns?
+		//when a tile is chosen to discard, the tile with that specific index is chosen on the client side, removed from their hand, and sent to the server
+		//not the index of the tile itself
+		//so the server would be receiving a tile, not an int
+		//tl;dr when a tile is recieved from a played it's implied that it is on their turn, but this can be doubly enforced using input validation
+		//but not entirely necessary since it's enforced strictly client side
+		//client1 sends tile to server as their discard
+		// THIS tile is relayed to client2 (which is then shoved into their "other player discard pile")
+		//client1's turn ends
+		//"TURN" symbol is sent to client2 to signify the start of their turn which sets their turn boolean
+		//then the drawn tile from the center is sent to client2
+		
+		//additionally: when a tile is drawn clientside i added code to check for yaku
+		//if it's found to be a win, it will send a full Hand obj to the server
+		//the server needs to validate that hand and send "WIN" back to that client, "LOSE" back to the other client to signify end of game
+		//this can be arg0 instanceof hand because I think it's the only time that we send a hand obj
+		//99% of the time this SHOULD result in game end because i don't see any reason why yaku would trigger a win clientside and not the same win serverside
 		else if (arg0 instanceof Integer) {
 			int index = (int)arg0;
 			Tile tile = new Tile("", 1, false);
