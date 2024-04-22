@@ -140,6 +140,9 @@
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
       </ownedParameter>
     </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_n18TYAC6Ee-hqvOMjifugA" name="sort">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_o1xYsAC6Ee-hqvOMjifugA" name="hand" type="_FGzvAAADEe-6QPnukVl3fQ"/>
+    </ownedOperation>
   </packagedElement>
   <packagedElement xmi:type="uml:Class" xmi:id="_L5kwYAAQEe-Tab37-n95bg" name="ChatServer" visibility="package">
     <generalization xmi:type="uml:Generalization" xmi:id="_L5kwYQAQEe-Tab37-n95bg">
@@ -480,6 +483,10 @@
     <ownedAttribute xmi:type="uml:Property" xmi:id="_n0KK8AAbEe-Tab37-n95bg" name="fos">
       <type xmi:type="uml:Class" href="../../ClassDiagrams/model.uml#_3lKzoxcpEeiw04JpNeJnEA"/>
     </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_C3Fa8wC6Ee-hqvOMjifugA" type="_L5kwYAAQEe-Tab37-n95bg" association="_C3Fa8AC6Ee-hqvOMjifugA">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_C3Fa9AC6Ee-hqvOMjifugA"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_C3Fa9QC6Ee-hqvOMjifugA" value="1"/>
+    </ownedAttribute>
     <ownedOperation xmi:type="uml:Operation" xmi:id="_toKJ4AAbEe-Tab37-n95bg" name="query">
       <ownedParameter xmi:type="uml:Parameter" xmi:id="_wy_HIAAbEe-Tab37-n95bg" name="query">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
@@ -521,6 +528,10 @@
     </ownedAttribute>
     <ownedAttribute xmi:type="uml:Property" xmi:id="_ffzSoAAcEe-Tab37-n95bg" name="server">
       <type xmi:type="uml:OpaqueBehavior" href="../../ClassDiagrams/model.uml#_3iCnIxcpEeiw04JpNeJnEA"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_B96XQAC6Ee-hqvOMjifugA" type="_L5kwYAAQEe-Tab37-n95bg" association="_B92s4AC6Ee-hqvOMjifugA">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_B96XQQC6Ee-hqvOMjifugA"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_B96XQgC6Ee-hqvOMjifugA" value="1"/>
     </ownedAttribute>
     <ownedOperation xmi:type="uml:Operation" xmi:id="_jSBAAAAcEe-Tab37-n95bg" name="ServerGUI"/>
     <ownedOperation xmi:type="uml:Operation" xmi:id="_lZoMwAAcEe-Tab37-n95bg" name="main">
@@ -992,4 +1003,22 @@
     </eAnnotations>
     <ownedEnd xmi:type="uml:Property" xmi:id="_CxELZQAeEe-Tab37-n95bg" type="_BnITYAAUEe-Tab37-n95bg" association="_CxDkUAAeEe-Tab37-n95bg"/>
   </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_B92s4AC6Ee-hqvOMjifugA" memberEnd="_B96XQAC6Ee-hqvOMjifugA _B96XQwC6Ee-hqvOMjifugA">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_B93T8AC6Ee-hqvOMjifugA" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_B93T8QC6Ee-hqvOMjifugA" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_B96XQwC6Ee-hqvOMjifugA" type="_IXELkAATEe-Tab37-n95bg" association="_B92s4AC6Ee-hqvOMjifugA"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_C3Fa8AC6Ee-hqvOMjifugA" memberEnd="_C3Fa8wC6Ee-hqvOMjifugA _C3Fa9gC6Ee-hqvOMjifugA">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_C3Fa8QC6Ee-hqvOMjifugA" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_C3Fa8gC6Ee-hqvOMjifugA" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_C3Fa9gC6Ee-hqvOMjifugA" type="__wq9gAASEe-Tab37-n95bg" association="_C3Fa8AC6Ee-hqvOMjifugA"/>
+  </packagedElement>
+  <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_1szK8AC5Ee-hqvOMjifugA">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_1s1AIAC5Ee-hqvOMjifugA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+      <references xmi:type="ecore:EPackage" href="pathmap://PAPYRUS_ACTIONLANGUAGE_PROFILE/ActionLanguage-Profile.profile.uml#_Kv8EIKFXEeS_KNX0nfvIVQ"/>
+    </eAnnotations>
+    <appliedProfile xmi:type="uml:Profile" href="pathmap://PAPYRUS_ACTIONLANGUAGE_PROFILE/ActionLanguage-Profile.profile.uml#ActionLanguage"/>
+  </profileApplication>
 </uml:Model>

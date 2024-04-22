@@ -19,6 +19,8 @@ public class ChatServer extends AbstractServer {
 	private Center center = new Center();
 	private Hand hand = new Hand();
 	private Yaku yaku = new Yaku();
+	private ConnectionToClient client1;
+	private ConnectionToClient client2;
 	
 
 	// Constructor
@@ -45,48 +47,48 @@ public class ChatServer extends AbstractServer {
 		status.setForeground(Color.GREEN);
 		log.append("Server started\n");
 		
-//		Tile tile1 = center.getFirstTile();
-//		center.removeFromCenter();
-//		Tile tile2 = center.getFirstTile();
-//		center.removeFromCenter();
-//		Tile tile3 = center.getFirstTile();
-//		center.removeFromCenter();
-//		Tile tile4 = center.getFirstTile();
-//		center.removeFromCenter();
-//		Tile tile5 = center.getFirstTile();
-//		center.removeFromCenter();
-//		Tile tile6 = center.getFirstTile();
-//		center.removeFromCenter();
-//		Tile tile7 = center.getFirstTile();
-//		center.removeFromCenter();
-//		Tile tile8 = center.getFirstTile();
-//		center.removeFromCenter();
-//		Tile tile9 = center.getFirstTile();
-//		center.removeFromCenter();
-//		Tile tile10 = center.getFirstTile();
-//		center.removeFromCenter();
-//		Tile tile11 = center.getFirstTile();
-//		center.removeFromCenter();
-//		Tile tile12 = center.getFirstTile();
-//		center.removeFromCenter();
-//		Tile tile13 = center.getFirstTile();
-//		center.removeFromCenter();
-//		Tile tile14 = center.getFirstTile();
-//		center.removeFromCenter();
-		Tile tile1 = new Tile("bamboo", 2, false);
-		Tile tile2 = new Tile("bamboo", 3, false);
-		Tile tile3 = new Tile("bamboo", 4, false);
-		Tile tile4 = new Tile("bamboo", 5, false);
-		Tile tile5 = new Tile("bamboo", 6, false);
-		Tile tile6 = new Tile("bamboo", 8, false);
-		Tile tile7 = new Tile("bamboo", 2, false);
-		Tile tile8 = new Tile("dragon", 2, false);
-		Tile tile9 = new Tile("dragon", 1, false);
-		Tile tile10 = new Tile("dragon", 3, true);
-		Tile tile11 = new Tile("character", 9, false);
-		Tile tile12 = new Tile("character", 5, false);
-		Tile tile13 = new Tile("character", 8, true);
-		Tile tile14 = new Tile("character", 3, true);
+		Tile tile1 = center.getFirstTile();
+		center.removeFromCenter();
+		Tile tile2 = center.getFirstTile();
+		center.removeFromCenter();
+		Tile tile3 = center.getFirstTile();
+		center.removeFromCenter();
+		Tile tile4 = center.getFirstTile();
+		center.removeFromCenter();
+		Tile tile5 = center.getFirstTile();
+		center.removeFromCenter();
+		Tile tile6 = center.getFirstTile();
+		center.removeFromCenter();
+		Tile tile7 = center.getFirstTile();
+		center.removeFromCenter();
+		Tile tile8 = center.getFirstTile();
+		center.removeFromCenter();
+		Tile tile9 = center.getFirstTile();
+		center.removeFromCenter();
+		Tile tile10 = center.getFirstTile();
+		center.removeFromCenter();
+		Tile tile11 = center.getFirstTile();
+		center.removeFromCenter();
+		Tile tile12 = center.getFirstTile();
+		center.removeFromCenter();
+		Tile tile13 = center.getFirstTile();
+		center.removeFromCenter();
+		Tile tile14 = center.getFirstTile();
+		center.removeFromCenter();
+//		Tile tile1 = new Tile("bamboo", 2, false);
+//		Tile tile2 = new Tile("bamboo", 3, false);
+//		Tile tile3 = new Tile("bamboo", 4, false);
+//		Tile tile4 = new Tile("bamboo", 5, false);
+//		Tile tile5 = new Tile("bamboo", 6, false);
+//		Tile tile6 = new Tile("bamboo", 8, false);
+//		Tile tile7 = new Tile("bamboo", 2, false);
+//		Tile tile8 = new Tile("dragon", 2, false);
+//		Tile tile9 = new Tile("dragon", 1, false);
+//		Tile tile10 = new Tile("dragon", 3, true);
+//		Tile tile11 = new Tile("character", 9, false);
+//		Tile tile12 = new Tile("character", 5, false);
+//		Tile tile13 = new Tile("character", 8, true);
+//		Tile tile14 = new Tile("character", 3, true);
 		
 		hand.addTile(tile1);
 		hand.addTile(tile2);
@@ -103,23 +105,23 @@ public class ChatServer extends AbstractServer {
 		hand.addTile(tile13);
 		hand.addTile(tile14);
 		
-		for(Tile tile : hand.getTile()) {
-			System.out.println(tile.getSuit() + " " + tile.getNumber());
-		}
-		System.out.println("--------------------------------------");
-		
-		ArrayList<Tile> newHand = hand.sort(hand);
-		
-		hand.setHand(newHand);
-		
-		for(Tile tile : hand.getTile()) {
-			System.out.println(tile.getSuit() + " " + tile.getNumber());
-		}
-		boolean game = false;
-		
-		game = yaku.checkWin(hand);
-		
-		System.out.println("Does Hand Win?: " + game);
+//		for(Tile tile : hand.getTile()) {
+//			System.out.println(tile.getSuit() + " " + tile.getNumber());
+//		}
+//		System.out.println("--------------------------------------");
+//		
+//		ArrayList<Tile> newHand = hand.sort(hand);
+//		
+//		hand.setHand(newHand);
+//		
+//		for(Tile tile : hand.getTile()) {
+//			System.out.println(tile.getSuit() + " " + tile.getNumber());
+//		}
+//		boolean game = false;
+//		
+//		game = yaku.checkWin(hand);
+//		
+//		System.out.println("Does Hand Win?: " + game);
 		
 //		Tile tile = center.getFirstTile();
 //		String str = tile.getSuit();
@@ -146,6 +148,14 @@ public class ChatServer extends AbstractServer {
 
 	public void handleMessageFromClient(Object arg0, ConnectionToClient arg1) {
 		if (arg0 instanceof LoginData) {
+			
+			if (client1 == null) {
+				client1 = arg1;
+			}
+			else {
+				client2 = arg1;
+			}
+			
 			LoginData data = (LoginData) arg0;
 			Object result = "";
 			dml = "select username, aes_decrypt(password,'key') from User Where username = '" + 
@@ -199,6 +209,42 @@ public class ChatServer extends AbstractServer {
 				arg1.sendToClient(result);
 			} catch (IOException e) {
 				return;
+			}
+		}
+		else if (arg0 instanceof Integer) {
+			int index = (int)arg0;
+			Tile tile = new Tile("", 1, false);
+			
+			tile = center.getFirstTile();
+			center.removeFromCenter();
+			
+			if (arg1 == client1) {
+				try {
+					arg1.sendToClient("TURN");
+				} catch (IOException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+				try {
+					client2.sendToClient(tile);
+				} catch (IOException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+			}
+			else if (arg1 == client2){
+				try {
+					arg1.sendToClient("TURN");
+				} catch (IOException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+				try {
+					client1.sendToClient(tile);
+				} catch (IOException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
 			}
 		}
 

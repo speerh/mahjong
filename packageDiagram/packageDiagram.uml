@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_1B8lMAC7Ee-hqvOMjifugA" name="packageDiagram">
+  <packageImport xmi:type="uml:PackageImport" xmi:id="_1CfXwAC7Ee-hqvOMjifugA">
+    <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+  </packageImport>
+  <packagedElement xmi:type="uml:Package" xmi:id="_9sLU8AC8Ee-hqvOMjifugA" name="Client User Interface">
+    <packagedElement xmi:type="uml:Package" xmi:id="_9sLU8QC8Ee-hqvOMjifugA" name="CreateAccountControl"/>
+    <packagedElement xmi:type="uml:Package" xmi:id="_9sLU8gC8Ee-hqvOMjifugA" name="CreateAccountPanel">
+      <packageImport xmi:type="uml:PackageImport" xmi:id="_9sLU8wC8Ee-hqvOMjifugA" importedPackage="_9sLU8QC8Ee-hqvOMjifugA"/>
+      <packageImport xmi:type="uml:PackageImport" xmi:id="_9sLU9AC8Ee-hqvOMjifugA" importedPackage="_9sLVBQC8Ee-hqvOMjifugA"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_9sLU9QC8Ee-hqvOMjifugA" name="InitialPanel">
+      <packageImport xmi:type="uml:PackageImport" xmi:id="_9sLU9gC8Ee-hqvOMjifugA" importedPackage="_9sLU-AC8Ee-hqvOMjifugA"/>
+      <packageImport xmi:type="uml:PackageImport" xmi:id="_9sLU9wC8Ee-hqvOMjifugA" importedPackage="_9sLVBQC8Ee-hqvOMjifugA"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_9sLU-AC8Ee-hqvOMjifugA" name="InitialControl"/>
+    <packagedElement xmi:type="uml:Package" xmi:id="_9sLU-QC8Ee-hqvOMjifugA" name="LoginPanel">
+      <packageImport xmi:type="uml:PackageImport" xmi:id="_9sLU-gC8Ee-hqvOMjifugA"/>
+      <packageImport xmi:type="uml:PackageImport" xmi:id="_9sLU-wC8Ee-hqvOMjifugA" importedPackage="_9sLU_QC8Ee-hqvOMjifugA"/>
+      <packageImport xmi:type="uml:PackageImport" xmi:id="_9sLU_AC8Ee-hqvOMjifugA" importedPackage="_9sLVBQC8Ee-hqvOMjifugA"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_9sLU_QC8Ee-hqvOMjifugA" name="LoginControl"/>
+    <packagedElement xmi:type="uml:Package" xmi:id="_9sLU_gC8Ee-hqvOMjifugA" name="Game">
+      <packageImport xmi:type="uml:PackageImport" xmi:id="_9sLU_wC8Ee-hqvOMjifugA">
+        <importedPackage xmi:type="uml:Package" href="../../TeamProject/packageDiagram.uml#_VFIs4OFXEe6P-cbFfTWuxA"/>
+      </packageImport>
+      <packageImport xmi:type="uml:PackageImport" xmi:id="_9sLVAAC8Ee-hqvOMjifugA" importedPackage="_9sLVBQC8Ee-hqvOMjifugA"/>
+      <packageImport xmi:type="uml:PackageImport" xmi:id="_9sLVAQC8Ee-hqvOMjifugA"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_9sLVAgC8Ee-hqvOMjifugA" name="Server">
+      <packagedElement xmi:type="uml:Package" xmi:id="_9sLVAwC8Ee-hqvOMjifugA" name="PlayerClient">
+        <packageImport xmi:type="uml:PackageImport" xmi:id="_9sLVBAC8Ee-hqvOMjifugA" importedPackage="_9sLVBQC8Ee-hqvOMjifugA"/>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_9sLVBQC8Ee-hqvOMjifugA" name="PlayerGUI"/>
+    <packagedElement xmi:type="uml:Package" xmi:id="_-bVhAAC8Ee-hqvOMjifugA" name="ClientGUI">
+      <ownedComment xmi:type="uml:Comment" xmi:id="_zPv1gADAEe-hqvOMjifugA">
+        <body>Hannah Speer&#xD;
+</body>
+      </ownedComment>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_EANM4AC_Ee-hqvOMjifugA" client="_-bVhAAC8Ee-hqvOMjifugA" supplier="_-HCsAAC8Ee-hqvOMjifugA"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_AbZUQAC9Ee-hqvOMjifugA" name="LoginPanel">
+      <packageImport xmi:type="uml:PackageImport" xmi:id="_AbZUQQC9Ee-hqvOMjifugA"/>
+      <packageImport xmi:type="uml:PackageImport" xmi:id="_AbZUQgC9Ee-hqvOMjifugA">
+        <importedPackage xmi:type="uml:Package" href="../../TeamProject/packageDiagram.uml#_2P9LAOGvEe6gWPc5cbBa3g"/>
+      </packageImport>
+      <packageImport xmi:type="uml:PackageImport" xmi:id="_AbZUQwC9Ee-hqvOMjifugA">
+        <importedPackage xmi:type="uml:Package" href="../../TeamProject/packageDiagram.uml#_I8tC0OFUEe6P-cbFfTWuxA"/>
+      </packageImport>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_OoZ6oAC_Ee-hqvOMjifugA" client="_AbZUQAC9Ee-hqvOMjifugA" supplier="_FgeXsAC9Ee-hqvOMjifugA"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_CIr8gAC9Ee-hqvOMjifugA" name="InitialPanel">
+      <packageImport xmi:type="uml:PackageImport" xmi:id="_CIr8gQC9Ee-hqvOMjifugA">
+        <importedPackage xmi:type="uml:Package" href="../../TeamProject/packageDiagram.uml#_ZFGF4OFYEe6P-cbFfTWuxA"/>
+      </packageImport>
+      <packageImport xmi:type="uml:PackageImport" xmi:id="_CIr8ggC9Ee-hqvOMjifugA">
+        <importedPackage xmi:type="uml:Package" href="../../TeamProject/packageDiagram.uml#_I8tC0OFUEe6P-cbFfTWuxA"/>
+      </packageImport>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_AN_fgAC_Ee-hqvOMjifugA" client="_CIr8gAC9Ee-hqvOMjifugA" supplier="_EXiZsAC9Ee-hqvOMjifugA"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_DeuiYAC9Ee-hqvOMjifugA" name="CreateAccountPanel">
+      <packageImport xmi:type="uml:PackageImport" xmi:id="_DeuiYQC9Ee-hqvOMjifugA">
+        <importedPackage xmi:type="uml:Package" href="../../TeamProject/packageDiagram.uml#_D3gOIOFVEe6P-cbFfTWuxA"/>
+      </packageImport>
+      <packageImport xmi:type="uml:PackageImport" xmi:id="_DeuiYgC9Ee-hqvOMjifugA">
+        <importedPackage xmi:type="uml:Package" href="../../TeamProject/packageDiagram.uml#_I8tC0OFUEe6P-cbFfTWuxA"/>
+      </packageImport>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_913KgAC-Ee-hqvOMjifugA" client="_DeuiYAC9Ee-hqvOMjifugA" supplier="_-HCsAAC8Ee-hqvOMjifugA"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_EXiZsAC9Ee-hqvOMjifugA" name="InitialControl">
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_DNy4gAC_Ee-hqvOMjifugA" client="_EXiZsAC9Ee-hqvOMjifugA" supplier="_-HCsAAC8Ee-hqvOMjifugA"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_EzLz4AC9Ee-hqvOMjifugA" name="CreateAccountControl">
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_9JaUMAC-Ee-hqvOMjifugA" client="_EzLz4AC9Ee-hqvOMjifugA" supplier="_DeuiYAC9Ee-hqvOMjifugA"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_FgeXsAC9Ee-hqvOMjifugA" name="LoginControl">
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_PmkMAAC_Ee-hqvOMjifugA" client="_FgeXsAC9Ee-hqvOMjifugA" supplier="_-HCsAAC8Ee-hqvOMjifugA"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_F_vGkAC9Ee-hqvOMjifugA" name="LoginData">
+      <packageImport xmi:type="uml:PackageImport" xmi:id="_F_vGkQC9Ee-hqvOMjifugA">
+        <importedPackage xmi:type="uml:Package" href="../../TeamProject/packageDiagram.uml#_VFIs4OFXEe6P-cbFfTWuxA"/>
+      </packageImport>
+      <packageImport xmi:type="uml:PackageImport" xmi:id="_F_vGkgC9Ee-hqvOMjifugA">
+        <importedPackage xmi:type="uml:Package" href="../../TeamProject/packageDiagram.uml#_I8tC0OFUEe6P-cbFfTWuxA"/>
+      </packageImport>
+      <packageImport xmi:type="uml:PackageImport" xmi:id="_F_vGkwC9Ee-hqvOMjifugA"/>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_OMzjwAC_Ee-hqvOMjifugA" client="_F_vGkAC9Ee-hqvOMjifugA" supplier="_AbZUQAC9Ee-hqvOMjifugA"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_t282wAC-Ee-hqvOMjifugA" name="CreateAccountData">
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_8bYJgAC-Ee-hqvOMjifugA" client="_t282wAC-Ee-hqvOMjifugA" supplier="_EzLz4AC9Ee-hqvOMjifugA"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_4bfzkAC-Ee-hqvOMjifugA" name="Error">
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_E8cysAC_Ee-hqvOMjifugA" client="_4bfzkAC-Ee-hqvOMjifugA" supplier="_-HCsAAC8Ee-hqvOMjifugA"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_GgEhkAC_Ee-hqvOMjifugA" name="GameControl">
+      <ownedComment xmi:type="uml:Comment" xmi:id="_10zzQADAEe-hqvOMjifugA">
+        <body>Hannah Speer&#xD;
+</body>
+      </ownedComment>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_R2EwgAC_Ee-hqvOMjifugA" client="_GgEhkAC_Ee-hqvOMjifugA" supplier="_-HCsAAC8Ee-hqvOMjifugA"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_Ib4uAAC_Ee-hqvOMjifugA" name="GamePanel">
+      <ownedComment xmi:type="uml:Comment" xmi:id="_3FO5UADAEe-hqvOMjifugA">
+        <body>Hannah Speer&#xD;
+</body>
+      </ownedComment>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_QXhu4AC_Ee-hqvOMjifugA" client="_Ib4uAAC_Ee-hqvOMjifugA" supplier="_GgEhkAC_Ee-hqvOMjifugA"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_g2Xf4AC_Ee-hqvOMjifugA" name="ChatServer">
+      <packagedElement xmi:type="uml:Package" xmi:id="_-HCsAAC8Ee-hqvOMjifugA" name="ChatClient">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_tUpwEADAEe-hqvOMjifugA">
+          <body>Hannah Speer</body>
+        </ownedComment>
+        <packageImport xmi:type="uml:PackageImport" xmi:id="_-HCsAQC8Ee-hqvOMjifugA">
+          <importedPackage xmi:type="uml:Package" href="../../TeamProject/packageDiagram.uml#_I8tC0OFUEe6P-cbFfTWuxA"/>
+        </packageImport>
+      </packagedElement>
+    </packagedElement>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Package" xmi:id="_MZSpoAC9Ee-hqvOMjifugA" name="Client Communication">
+    <packagedElement xmi:type="uml:Package" xmi:id="_MZSpoQC9Ee-hqvOMjifugA" name="Server">
+      <packagedElement xmi:type="uml:Package" xmi:id="_MZSpogC9Ee-hqvOMjifugA" name="Database"/>
+      <packagedElement xmi:type="uml:Package" xmi:id="_MZSpowC9Ee-hqvOMjifugA" name="Game">
+        <packageImport xmi:type="uml:PackageImport" xmi:id="_MZSppAC9Ee-hqvOMjifugA">
+          <importedPackage xmi:type="uml:Package" href="../../TeamProject/packageDiagram.uml#_RFp_kOFXEe6P-cbFfTWuxA"/>
+        </packageImport>
+        <packageImport xmi:type="uml:PackageImport" xmi:id="_MZSppQC9Ee-hqvOMjifugA"/>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_MZSppgC9Ee-hqvOMjifugA" name="LoginControl">
+      <packageImport xmi:type="uml:PackageImport" xmi:id="_MZSppwC9Ee-hqvOMjifugA">
+        <importedPackage xmi:type="uml:Package" href="../../TeamProject/packageDiagram.uml#_I8tC0OFUEe6P-cbFfTWuxA"/>
+      </packageImport>
+      <packageImport xmi:type="uml:PackageImport" xmi:id="_MZTQsAC9Ee-hqvOMjifugA" importedPackage="_MZSpoQC9Ee-hqvOMjifugA"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_MZTQsQC9Ee-hqvOMjifugA" name="InitialControl">
+      <packageImport xmi:type="uml:PackageImport" xmi:id="_MZTQsgC9Ee-hqvOMjifugA">
+        <importedPackage xmi:type="uml:Package" href="../../TeamProject/packageDiagram.uml#_I8tC0OFUEe6P-cbFfTWuxA"/>
+      </packageImport>
+      <packageImport xmi:type="uml:PackageImport" xmi:id="_MZTQswC9Ee-hqvOMjifugA" importedPackage="_MZSpoQC9Ee-hqvOMjifugA"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_MZTQtAC9Ee-hqvOMjifugA" name="CreateAccountControl">
+      <packageImport xmi:type="uml:PackageImport" xmi:id="_MZTQtQC9Ee-hqvOMjifugA">
+        <importedPackage xmi:type="uml:Package" href="../../TeamProject/packageDiagram.uml#_I8tC0OFUEe6P-cbFfTWuxA"/>
+      </packageImport>
+      <packageImport xmi:type="uml:PackageImport" xmi:id="_MZTQtgC9Ee-hqvOMjifugA" importedPackage="_MZSpoQC9Ee-hqvOMjifugA"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_Q4Vn0AC9Ee-hqvOMjifugA" name="LoginControl">
+      <packageImport xmi:type="uml:PackageImport" xmi:id="_Q4Vn0QC9Ee-hqvOMjifugA">
+        <importedPackage xmi:type="uml:Package" href="../../TeamProject/packageDiagram.uml#_I8tC0OFUEe6P-cbFfTWuxA"/>
+      </packageImport>
+      <packageImport xmi:type="uml:PackageImport" xmi:id="_Q4Vn0gC9Ee-hqvOMjifugA">
+        <importedPackage xmi:type="uml:Package" href="../../TeamProject/packageDiagram.uml#_hW_GIOGxEe6gWPc5cbBa3g"/>
+      </packageImport>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_to0esAC_Ee-hqvOMjifugA" client="_Q4Vn0AC9Ee-hqvOMjifugA" supplier="_NgHHwAC9Ee-hqvOMjifugA"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_TiDcEAC9Ee-hqvOMjifugA" name="ChatServer">
+      <ownedComment xmi:type="uml:Comment" xmi:id="_AWY7oADBEe-hqvOMjifugA">
+        <body>Hannah Speer&#xD;
+Alvin Zheng&#xD;
+Addison Zheng</body>
+      </ownedComment>
+      <packagedElement xmi:type="uml:Package" xmi:id="_TiDcEQC9Ee-hqvOMjifugA" name="Database"/>
+      <packagedElement xmi:type="uml:Package" xmi:id="_TiDcEgC9Ee-hqvOMjifugA" name="Game">
+        <packageImport xmi:type="uml:PackageImport" xmi:id="_TiDcEwC9Ee-hqvOMjifugA">
+          <importedPackage xmi:type="uml:Package" href="../../TeamProject/packageDiagram.uml#_RFp_kOFXEe6P-cbFfTWuxA"/>
+        </packageImport>
+        <packageImport xmi:type="uml:PackageImport" xmi:id="_TiDcFAC9Ee-hqvOMjifugA"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Package" xmi:id="_NgHHwAC9Ee-hqvOMjifugA" name="ChatClient">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_96T6wADAEe-hqvOMjifugA">
+          <body>Hannah Speer</body>
+        </ownedComment>
+        <packageImport xmi:type="uml:PackageImport" xmi:id="_NgHHwQC9Ee-hqvOMjifugA">
+          <importedPackage xmi:type="uml:Package" href="../../TeamProject/packageDiagram.uml#_RFp_kOFXEe6P-cbFfTWuxA"/>
+        </packageImport>
+        <packageImport xmi:type="uml:PackageImport" xmi:id="_NgHHwgC9Ee-hqvOMjifugA"/>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_TiDcFQC9Ee-hqvOMjifugA" name="CreateAccountControl">
+      <packageImport xmi:type="uml:PackageImport" xmi:id="_TiDcFgC9Ee-hqvOMjifugA">
+        <importedPackage xmi:type="uml:Package" href="../../TeamProject/packageDiagram.uml#_I8tC0OFUEe6P-cbFfTWuxA"/>
+      </packageImport>
+      <packageImport xmi:type="uml:PackageImport" xmi:id="_TiDcFwC9Ee-hqvOMjifugA" importedPackage="_TiDcEAC9Ee-hqvOMjifugA"/>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_uh_iYAC_Ee-hqvOMjifugA" client="_TiDcFQC9Ee-hqvOMjifugA" supplier="_NgHHwAC9Ee-hqvOMjifugA"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_TiDcGAC9Ee-hqvOMjifugA" name="InitialControl">
+      <packageImport xmi:type="uml:PackageImport" xmi:id="_TiDcGQC9Ee-hqvOMjifugA">
+        <importedPackage xmi:type="uml:Package" href="../../TeamProject/packageDiagram.uml#_I8tC0OFUEe6P-cbFfTWuxA"/>
+      </packageImport>
+      <packageImport xmi:type="uml:PackageImport" xmi:id="_TiDcGgC9Ee-hqvOMjifugA" importedPackage="_TiDcEAC9Ee-hqvOMjifugA"/>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_vdeTMAC_Ee-hqvOMjifugA" client="_TiDcGAC9Ee-hqvOMjifugA" supplier="_NgHHwAC9Ee-hqvOMjifugA"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_n7aP8AC_Ee-hqvOMjifugA" name="GameControl">
+      <ownedComment xmi:type="uml:Comment" xmi:id="_D3AisADBEe-hqvOMjifugA">
+        <body>Hannah Speer</body>
+      </ownedComment>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_svfC8AC_Ee-hqvOMjifugA" client="_n7aP8AC_Ee-hqvOMjifugA" supplier="_NgHHwAC9Ee-hqvOMjifugA"/>
+    </packagedElement>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Package" xmi:id="_ZZbfIAC9Ee-hqvOMjifugA" name="Database">
+    <packagedElement xmi:type="uml:Package" xmi:id="_ZZbfIQC9Ee-hqvOMjifugA" name="CreateAccountData"/>
+    <packagedElement xmi:type="uml:Package" xmi:id="_ZZbfIgC9Ee-hqvOMjifugA" name="LoginData"/>
+    <packagedElement xmi:type="uml:Package" xmi:id="_ccZg4AC9Ee-hqvOMjifugA" name="LoginData"/>
+    <packagedElement xmi:type="uml:Package" xmi:id="_ccaH8AC9Ee-hqvOMjifugA" name="CreateAccountData"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Package" xmi:id="_npRB8AC9Ee-hqvOMjifugA" name="Server Communication">
+    <packagedElement xmi:type="uml:Package" xmi:id="_npRB8QC9Ee-hqvOMjifugA" name="Game">
+      <packageImport xmi:type="uml:PackageImport" xmi:id="_npRB8gC9Ee-hqvOMjifugA" importedPackage="_npRB9AC9Ee-hqvOMjifugA"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_npRB8wC9Ee-hqvOMjifugA" name="GameRule"/>
+    <packagedElement xmi:type="uml:Package" xmi:id="_npRB9AC9Ee-hqvOMjifugA" name="PlayerHand">
+      <packageImport xmi:type="uml:PackageImport" xmi:id="_npRB9QC9Ee-hqvOMjifugA" importedPackage="_npRB8wC9Ee-hqvOMjifugA"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_npRB9gC9Ee-hqvOMjifugA" name="Score"/>
+    <packagedElement xmi:type="uml:Package" xmi:id="_npRB9wC9Ee-hqvOMjifugA" name="Database"/>
+    <packagedElement xmi:type="uml:Package" xmi:id="_npRB-AC9Ee-hqvOMjifugA" name="Server">
+      <packageImport xmi:type="uml:PackageImport" xmi:id="_npRB-QC9Ee-hqvOMjifugA" importedPackage="_npRB8QC9Ee-hqvOMjifugA"/>
+      <packageImport xmi:type="uml:PackageImport" xmi:id="_npRB-gC9Ee-hqvOMjifugA" importedPackage="_npRB9gC9Ee-hqvOMjifugA"/>
+      <packagedElement xmi:type="uml:Package" xmi:id="_npRB-wC9Ee-hqvOMjifugA" name="Database"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_pwtPkAC9Ee-hqvOMjifugA" name="Database">
+      <packagedElement xmi:type="uml:Package" xmi:id="_tyK54wC9Ee-hqvOMjifugA" name="ChatServer">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_SbQ2UADBEe-hqvOMjifugA">
+          <body>Hannah Speer&#xD;
+Alvin Zheng&#xD;
+Addison Zheng</body>
+        </ownedComment>
+        <packageImport xmi:type="uml:PackageImport" xmi:id="_tyK55AC9Ee-hqvOMjifugA"/>
+        <packageImport xmi:type="uml:PackageImport" xmi:id="_tyK55QC9Ee-hqvOMjifugA"/>
+        <packagedElement xmi:type="uml:Package" xmi:id="_tyK55gC9Ee-hqvOMjifugA" name="Database"/>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_tyKS0AC9Ee-hqvOMjifugA" name="Hand">
+      <ownedComment xmi:type="uml:Comment" xmi:id="_MdzZYADBEe-hqvOMjifugA">
+        <body>Addison Zheng&#xD;
+Alvin Zheng</body>
+      </ownedComment>
+      <packageImport xmi:type="uml:PackageImport" xmi:id="_tyKS0QC9Ee-hqvOMjifugA" importedPackage="_tyK54AC9Ee-hqvOMjifugA"/>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_pGQdAADAEe-hqvOMjifugA" client="_tyKS0AC9Ee-hqvOMjifugA" supplier="_tyK54wC9Ee-hqvOMjifugA"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_tyK54AC9Ee-hqvOMjifugA" name="Tile">
+      <ownedComment xmi:type="uml:Comment" xmi:id="_GyTPIADBEe-hqvOMjifugA">
+        <body>Addison Zheng</body>
+      </ownedComment>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_orJ1YADAEe-hqvOMjifugA" client="_tyK54AC9Ee-hqvOMjifugA" supplier="_tyKS0AC9Ee-hqvOMjifugA"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_XwvisADAEe-hqvOMjifugA" name="Center">
+      <ownedComment xmi:type="uml:Comment" xmi:id="_J4-sMADBEe-hqvOMjifugA">
+        <body>Hannah Speer&#xD;
+Alvin Zheng&#xD;
+Addison Zheng</body>
+      </ownedComment>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_qK-pYADAEe-hqvOMjifugA" client="_XwvisADAEe-hqvOMjifugA" supplier="_tyK54wC9Ee-hqvOMjifugA"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_YAiSMADAEe-hqvOMjifugA" name="TileSet">
+      <ownedComment xmi:type="uml:Comment" xmi:id="_Fe2DMADBEe-hqvOMjifugA">
+        <body>Hannah Speer&#xD;
+</body>
+      </ownedComment>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_pkPZgADAEe-hqvOMjifugA" client="_YAiSMADAEe-hqvOMjifugA" supplier="_XwvisADAEe-hqvOMjifugA"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_mAOgMADAEe-hqvOMjifugA" name="Yaku">
+      <ownedComment xmi:type="uml:Comment" xmi:id="_O2H7oADBEe-hqvOMjifugA">
+        <body>Addison Zheng&#xD;
+Alvin Zheng&#xD;
+Jack Glidewell&#xD;
+Trey Massingill</body>
+      </ownedComment>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_oJDN4ADAEe-hqvOMjifugA" client="_mAOgMADAEe-hqvOMjifugA" supplier="_tyK54wC9Ee-hqvOMjifugA"/>
+    </packagedElement>
+  </packagedElement>
+</uml:Model>
