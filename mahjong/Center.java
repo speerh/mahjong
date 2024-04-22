@@ -62,8 +62,18 @@ public class Center {
 		System.out.println(centerTiles);
 	}
 	
-	public Center() {
+	public Hand genFirstHand() {
+		Hand hand = new Hand();
+		Tile tile = new Tile(null, 0, null);
+		for(int i = 0; i < 14; i++) {
+			tile = centerTiles.get(0);
+			hand.addTile(tile);
+			centerTiles.remove(0);
+		}
 		
+		return hand;
+	}
+	public Center() {
 		addToArrayList(originalTiles);
 		Collections.shuffle(centerTiles);
 		
