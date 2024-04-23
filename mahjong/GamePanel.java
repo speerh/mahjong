@@ -77,14 +77,8 @@ public class GamePanel extends JPanel
     
     //HAND DRAW RENDERING--
     handDrawPanel = new JPanel();
-    String fn = this.getDraw().getSuit()+ this.getDraw().getNumber() + ".png";
-    System.out.println(fn);
-	handDraw = new JButton(new ImageIcon("images/" + this.getDraw().getSuit()+ this.getDraw().getNumber() + ".png"));
-	handDraw.addActionListener(gc);
-	handDraw.setContentAreaFilled(false);
-	handDraw.setBorderPainted(false);
-	handDraw.setActionCommand("d");
-	handDrawPanel.add(handDraw);
+    redrawDraw();
+    
 	
 	
 
@@ -110,6 +104,7 @@ public class GamePanel extends JPanel
   public void drawHand() {
 	  handPanel.removeAll();
 	  ArrayList<JButton> tileButtons = new ArrayList();
+	  
 	    for (int i = 0; i < 13; i++) {
 	    	JButton temp = new JButton(new ImageIcon("images/" + hand.getTile().get(i).getSuit() + hand.getTile().get(i).getNumber() + ".png"));
 	    	temp.setContentAreaFilled(false);
@@ -137,19 +132,32 @@ public class GamePanel extends JPanel
   }
   public void drawVisible(Boolean in) {
 	  handDraw.setVisible(in);
-	  //handDrawPanel.setVisible(false);
+	  handDrawPanel.setVisible(in);
 	  handDrawPanel.revalidate();
 	  
   }
+  
+  public void redrawDraw() {
+	  handDrawPanel.removeAll();
+	  String fn = this.getDraw().getSuit()+ this.getDraw().getNumber() + ".png";
+	  System.out.print("DRAWING DRAWN TILE:" + fn);
+	    System.out.println(fn);
+		handDraw = new JButton(new ImageIcon("images/" + this.getDraw().getSuit()+ this.getDraw().getNumber() + ".png"));
+		handDraw.addActionListener(gc);
+		handDraw.setContentAreaFilled(false);
+		handDraw.setBorderPainted(false);
+		handDraw.setActionCommand("d");
+		System.out.print("REACHED 2 REDRAW");
+		handDrawPanel.add(handDraw);
+		handDrawPanel.revalidate();
+  }
+  
   public void drawDiscards() {
 	  playerDiscards.removeAll();
 	  ArrayList<JLabel> playerDiscardsList = new ArrayList();
-	  System.out.println("-----------------------");
 	  if(hand.discards.size() - 1 < 3) {
-		  System.out.println("LESS THAN 3");
 		  for (int i = 0; i < hand.discards.size(); i++) {
 			  System.out.println(hand.discards.get(0));
-			  System.out.println("*****************");
 		    	JLabel temp = new JLabel(new ImageIcon("images/" + hand.discards.get(i).getSuit() + hand.discards.get(i).getNumber()  + ".png"));
 		    	temp.setSize(new Dimension(45, 54));
 		    	playerDiscardsList.add(temp);
@@ -158,8 +166,6 @@ public class GamePanel extends JPanel
 	  }
 	  else {
 		  for (int i = 1; i <= 3; i++) {
-			  System.out.println("3+");
-			  System.out.println("***********2222222222222******");
 		    	JLabel temp = new JLabel(new ImageIcon("images/" + hand.discards.get(hand.discards.size() - i).getSuit() + hand.discards.get(hand.discards.size() - i).getNumber()  + ".png"));
 		    	temp.setSize(new Dimension(45, 54));
 		    	playerDiscardsList.add(temp);

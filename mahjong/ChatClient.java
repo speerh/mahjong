@@ -87,8 +87,7 @@ public class ChatClient extends AbstractClient
     else if(arg0 instanceof Tile) {
     	//is player turn?
     	if(getTurn()) {
-    		Hand test = hand;
-    		test.addTile((Tile) arg0);
+    		gameControl.redrawDrawn((Tile)arg0);
     		System.out.println("DRAWN RECEIVED");
     		//if turn, this tile is the drawn tile
     		//update drawn tile
