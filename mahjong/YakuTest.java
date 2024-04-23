@@ -44,6 +44,31 @@ public class YakuTest {
 	}
 	
 	@Test
+	public void testToitoi1() {
+		Yaku yaku = new Yaku();
+		Hand hand = new Hand();
+		Tile tile = new Tile("bamboo", 1, true);
+		Tile tile2 = new Tile("bamboo", 1, true);
+		Tile tile3 = new Tile("bamboo", 1, true);
+		Tile tile4 = new Tile("circle", 1, true);
+		Tile tile5 = new Tile("circle", 1, true);
+		Tile tile6 = new Tile ("circle", 1, true);
+		Tile tile7 = new Tile("character", 1, true);
+		Tile tile8 = new Tile("character", 1, true);
+		Tile tile9 = new Tile("character", 1, true);
+		hand.addTile(tile);
+		hand.addTile(tile2);
+		hand.addTile(tile3);
+		hand.addTile(tile4);
+		hand.addTile(tile5);
+		hand.addTile(tile6);
+		hand.addTile(tile7);
+		hand.addTile(tile8);
+		hand.addTile(tile9);
+		boolean win = yaku.checkWin(hand);
+		assertTrue("Expected Result True", win);
+	}
+	@Test
 	public void testFalse() {
 		Yaku yaku = new Yaku();
 		Hand hand = new Hand();
