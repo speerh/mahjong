@@ -52,7 +52,7 @@ public class GamePanel extends JPanel
 	  
 	  
 	  p2DiscardPanel = new JPanel();
-	  p2DiscardPanel.setBackground(Color.GREEN);
+	  p2DiscardPanel.setBackground(new Color(103, 128, 101));
 	  p2Discards();
 	  
 	  
@@ -208,6 +208,10 @@ public class GamePanel extends JPanel
       if(!enable) {
     	  drawVisible(false);
       }
+  }
+  
+  public Hand getHand() {
+	  return hand;
   }
  
   

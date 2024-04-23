@@ -14,7 +14,7 @@ public class LosePanel extends JPanel
     // Create the information label.
 	  
 	  //set string using IC
-    JLabel label = new JLabel("YOU WIN", JLabel.CENTER);
+    JLabel label = new JLabel("YOU LOSE", JLabel.CENTER);
     
     
     // Arrange the components in a grid.

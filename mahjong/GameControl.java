@@ -69,6 +69,12 @@ public class GameControl implements ActionListener
 	  gamePanel.setHand(in);
   }
   
+  public Hand getHand() {
+	  GamePanel gamePanel = (GamePanel)container.getComponent(3);
+
+	  return gamePanel.getHand();
+  }
+  
   public void setTurn(Boolean in) {
 	  GamePanel gamePanel = (GamePanel)container.getComponent(3);
 	  turn = in;

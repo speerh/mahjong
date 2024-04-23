@@ -318,45 +318,51 @@ public class ChatServer extends AbstractServer {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
-			}else if (arg0 instanceof String) {
-				
-				if (arg0 == "WIN") {
-					if(arg1 == client1) {
-						try {
-							client1.sendToClient("WIN");
-						} catch (IOException e) {
-							// TODO Auto-generated catch block
-							e.printStackTrace();
-						}
-						
-						try {
-							client2.sendToClient("LOSE");
-						} catch (IOException e) {
-							// TODO Auto-generated catch block
-							e.printStackTrace();
-						}
-					} else if (arg1 == client2) {
-						try {
-							client2.sendToClient("WIN");
-						} catch (IOException e) {
-							// TODO Auto-generated catch block
-							e.printStackTrace();
-						}
-						try {
-							client1.sendToClient("LOSE");
-						} catch (IOException e) {
-							// TODO Auto-generated catch block
-							e.printStackTrace();
-						}
-					}
-					
-				}
+			}
+			
 					
 				
 				
 				
 			}
+		else if (arg0 instanceof String) {
+			
+			if (arg0.equals("WIN")) {
+				if(arg1 == client1) {
+					System.out.println("CLIENT1 WIN");
+					try {
+						client1.sendToClient("WIN");
+					} catch (IOException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
+					
+					try {
+						client2.sendToClient("LOSE");
+					} catch (IOException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
+				} else if (arg1 == client2) {
+					System.out.println("CLIENT2 WIN");
+
+					try {
+						client2.sendToClient("WIN");
+					} catch (IOException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
+					try {
+						client1.sendToClient("LOSE");
+					} catch (IOException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
+				}
+				
+			}
 		}
+	
 
 	}
 
