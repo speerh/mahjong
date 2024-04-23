@@ -163,6 +163,132 @@ public class Yaku {
 			}
 
 		}
+		// Toitoi - All triplets 
+		String[] Toitoi1 = { "character1", "character1", "character1", "bamboo1", "bamboo1", "bamboo1",
+				"circle1", "circle1", "circle1" };
+
+		for (String item : Toitoi1) {
+			if (!newTiles.contains(item)) {
+				win = false;
+				break;
+			} else {
+				name = "Toitoi";
+				points = 40;
+				win = true;
+				counter++;
+				if (counter == 9)
+				{
+					return win;
+				}
+
+			}
+
+		}
+
+		String[] Toitoi2 = { "character2", "character2", "character2", "bamboo2", "bamboo2", "bamboo2",
+				"circle2", "circle2", "circle2" };
+
+		for (String item : Toitoi2) {
+			if (!newTiles.contains(item)) {
+				win = false;
+				break;
+			} else {
+				name = "Toitoi";
+				points = 40;
+				win = true;
+				counter++;
+				if (counter == 9)
+				{
+					return win;
+				}
+
+			}
+
+		}
+		String[] Toitoi3 = { "character3", "character3", "character3", "bamboo3", "bamboo3", "bamboo3",
+				"circle3", "circle3", "circle3" };
+
+		for (String item : Toitoi3) {
+			if (!newTiles.contains(item)) {
+				win = false;
+				break;
+			} else {
+				name = "Toitoi";
+				points = 40;
+				win = true;
+				counter++;
+				if (counter == 9)
+				{
+					return win;
+				}
+
+			}
+
+		}
+
+		//Ryanpeiko - Hand contains two Ippeikos
+		String[] Ryanpeiko = { "bamboo2", "bamboo3", "bamboo4", "bamboo2", "bamboo3", "bamboo4",
+				"character2", "character3", "character3", "character2", "character3", "character4" };
+
+		for (String item : Ryanpeiko) {
+			if (!newTiles.contains(item)) {
+				win = false;
+				break;
+			} else {
+				name = "Ryanpeiko";
+				points = 40;
+				win = true;
+				counter++;
+				if (counter == 9)
+				{
+					return win;
+				}
+
+			}
+
+		}
+
+		String[] Ryanpeiko2 = { "circle2", "circle3", "circle4", "circle2", "circle3", "circle4",
+				"character2", "character3", "character4", "character2", "character3", "character4" };
+
+		for (String item : Ryanpeiko2) {
+			if (!newTiles.contains(item)) {
+				win = false;
+				break;
+			} else {
+				name = "Ryanpeiko";
+				points = 40;
+				win = true;
+				counter++;
+				if (counter == 9)
+				{
+					return win;
+				}
+			}
+
+		}
+
+		String[] Ryanpeiko3 = { "bamboo2", "bamboo3", "bamboo4", "bamboo2", "bamboo3", "bamboo4",
+				"circle2", "circle3", "circle4", "circle2", "circle3", "circle4" };
+
+		for (String item : Ryanpeiko3) {
+			if (!newTiles.contains(item)) {
+				win = false;
+				break;
+			} else {
+				name = "Ryanpeiko";
+				points = 40;
+				win = true;
+				counter++;
+				if (counter == 9)
+				{
+					return win;
+				}
+
+			}
+
+		}
+
 		return win;
 	}
 }
