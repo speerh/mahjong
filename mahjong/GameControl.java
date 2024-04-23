@@ -24,8 +24,11 @@ public class GameControl implements ActionListener
 	  GamePanel gamePanel = (GamePanel)container.getComponent(3);
     // Get the name of the button clicked.
     String command = ae.getActionCommand();
-    
-    System.out.println(command);
+        try {
+		client.sendToServer("TEST");
+	} catch (IOException e) {
+		// TODO Auto-generated catch block
+	}
     
     if(command.equalsIgnoreCase("d")) {
     	//DISCARD 	
@@ -46,13 +49,10 @@ public class GameControl implements ActionListener
     	//send tile to server
     	//REMOVE ENTRY FROM ARRAYLIST BASED OFF OF ITERATOR
     	try {
-    		System.out.println("CLIENT SENDING TILE");
-    		System.out.println(gamePanel.hand.getTile().get(index).getSuit() + gamePanel.hand.getTile().get(index).getNumber());
 			client.sendToServer(gamePanel.hand.getTile().get(index));
-			client.sendToServer("TEST");
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
-			e.printStackTrace();
+		
 		}
     	gamePanel.hand.removeTile(index);
     	//ADD IN DRAWN TILE
@@ -69,12 +69,12 @@ public class GameControl implements ActionListener
 	  client.updateHand(in);
 	  GamePanel gamePanel = (GamePanel)container.getComponent(3);
 	  gamePanel.setHand(in);
-	  System.out.println("HAND UPDATED");
   }
   
   public void setTurn(Boolean in) {
 	  GamePanel gamePanel = (GamePanel)container.getComponent(3);
 	  turn = in;
+	  System.out.println("TURN: " + in);
 	  gamePanel.enableButtons(turn);
 	  
 	  

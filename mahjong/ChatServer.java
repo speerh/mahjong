@@ -239,31 +239,44 @@ public class ChatServer extends AbstractServer {
 		//this can be arg0 instanceof hand because I think it's the only time that we send a hand obj
 		//99% of the time this SHOULD result in game end because i don't see any reason why yaku would trigger a win clientside and not the same win serverside
 		else if (arg0 instanceof Tile) {
-			Tile tile = new Tile("", 1, false);
-			System.out.println("CLIENT SENT TILE");
-			
+			Tile tile = new Tile("", 1, false);			
 			tile = (Tile) arg0;
 			
 			if (arg1 == client1) {
-				System.out.println("CLIENT1 SENT TILE");
+				System.out.println("CLIENT1 SENT SERVER TILE");
 				//send discard to client 2
 				try {
 					client2.sendToClient(tile);
+					System.out.println("SENT DISCARD TILE TO CLIENT1");
+
 				} catch (IOException e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
+				
 				//send turn to client 2
 				try {
+					System.out.println("CLIENT2 SENT TURN");
+
 					client2.sendToClient("TURN");
 				} catch (IOException e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
+				try {
+					wait(500);
+				} catch (InterruptedException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
 				//draw for client 2, send to client
+				System.out.println("CLIENT2 SENT TILE");
+
 				tile = center.getFirstTile();
 				center.removeFromCenter();
 				try {
+					System.out.println("CLIENT2 SENT TRAW");
+
 					client2.sendToClient(tile);
 				} catch (IOException e) {
 					// TODO Auto-generated catch block
@@ -274,6 +287,8 @@ public class ChatServer extends AbstractServer {
 				System.out.println("CLIENT2 SENT TILE");
 				//send discard to client 1
 				try {
+					System.out.println("CLIENT1 SENT DISCARD");
+
 					client1.sendToClient(tile);
 				} catch (IOException e) {
 					// TODO Auto-generated catch block
@@ -281,8 +296,15 @@ public class ChatServer extends AbstractServer {
 				}
 				//send turn to client 1
 				try {
+					System.out.println("CLIENT1 SENT TURN");
 					client1.sendToClient("TURN");
 				} catch (IOException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+				try {
+					wait(500);
+				} catch (InterruptedException e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
@@ -290,6 +312,7 @@ public class ChatServer extends AbstractServer {
 				tile = center.getFirstTile();
 				center.removeFromCenter();
 				try {
+					System.out.println("CLIENT1 SENT DRAW");
 					client1.sendToClient(tile);
 				} catch (IOException e) {
 					// TODO Auto-generated catch block
@@ -315,9 +338,6 @@ public class ChatServer extends AbstractServer {
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-		}
-		while(!gameEnd) {
-		//TURN CODE HERE
 		}
 	}
 }
