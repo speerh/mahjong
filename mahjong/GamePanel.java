@@ -9,8 +9,9 @@ import javax.swing.*;
 public class GamePanel extends JPanel
 {
 	public Hand hand = new Hand();
+	public Hand hand2 = new Hand();
 	GameControl gc;
-	JPanel handPanel, playerDiscards, handDrawPanel;
+	JPanel handPanel, playerDiscards, handDrawPanel, p2DiscardPanel;
 	JButton handDraw;
 	Tile drawn = new Tile("dragon", 3, true);
 	//init hand for test data
@@ -50,13 +51,10 @@ public class GamePanel extends JPanel
 	    }
 	  
 	  
-	  JPanel p2Discards = new JPanel();
-	  p2Discards.setOpaque(false);
-	  for (int i = 0; i < 3; i++) {
-	    	JLabel temp = new JLabel(new ImageIcon("images/" + hand.getTile().get(i) + ".png"));
-	    	temp.setSize(new Dimension(45, 54));
-	    	p2Discards.add(temp);
-	    }
+	  p2DiscardPanel = new JPanel();
+	  p2DiscardPanel.setBackground(Color.GREEN);
+	  p2Discards();
+	  
 	  
 	//CENTER TILES-------------------------------------------------------------------
 	  JPanel centerTiles = new JPanel();
@@ -94,7 +92,7 @@ public class GamePanel extends JPanel
     JPanel grid = new JPanel(new GridLayout(6, 2, 5, 5));
     grid.setOpaque(false);
     grid.add(p2Hand);
-    grid.add(p2Discards);
+    grid.add(p2DiscardPanel);
     grid.add(centerTiles);
     grid.add(playerDiscards);
     grid.add(handPanel);
@@ -144,13 +142,56 @@ public class GamePanel extends JPanel
 	  
   }
   public void drawDiscards() {
-	  for (int i = 0; i < 3; i++) {
-	    	JLabel temp = new JLabel(new ImageIcon("images/" + hand.discards + ".png"));
-	    	temp.setSize(new Dimension(45, 54));
-	    	playerDiscards.add(temp);
-	    }
-	  playerDiscards.revalidate();
+	  playerDiscards.removeAll();
+	  ArrayList<JLabel> playerDiscardsList = new ArrayList();
+	  System.out.println("-----------------------");
+	  if(hand.discards.size() - 1 < 3) {
+		  System.out.println("LESS THAN 3");
+		  for (int i = 0; i < hand.discards.size(); i++) {
+			  System.out.println(hand.discards.get(0));
+			  System.out.println("*****************");
+		    	JLabel temp = new JLabel(new ImageIcon("images/" + hand.discards.get(i).getSuit() + hand.discards.get(i).getNumber()  + ".png"));
+		    	temp.setSize(new Dimension(45, 54));
+		    	playerDiscardsList.add(temp);
+		    	playerDiscards.add(temp);
+		    }
+	  }
+	  else {
+		  for (int i = 1; i <= 3; i++) {
+			  System.out.println("3+");
+			  System.out.println("***********2222222222222******");
+		    	JLabel temp = new JLabel(new ImageIcon("images/" + hand.discards.get(hand.discards.size() - i).getSuit() + hand.discards.get(hand.discards.size() - i).getNumber()  + ".png"));
+		    	temp.setSize(new Dimension(45, 54));
+		    	playerDiscardsList.add(temp);
+		    	playerDiscards.add(temp);
+		    }
+		  playerDiscards.revalidate();
+	  }
   }
+  
+  public void p2Discards() {
+	  
+	    p2DiscardPanel.removeAll();
+	    ArrayList<JLabel> p2DiscardTiles = new ArrayList();
+	  if(hand2.discards.size() - 1 < 3) {
+		  for (int i = 0; i < hand2.discards.size(); i++) {
+		    	JLabel temp = new JLabel(new ImageIcon("images/" + hand2.discards.get(i).getSuit() + hand2.discards.get(i).getNumber()  + ".png"));
+		    	temp.setSize(new Dimension(45, 54));
+		    	p2DiscardTiles.add(temp);
+		    	p2DiscardPanel.add(temp);
+		    }
+	  }
+	  else {
+		  for (int i = 1; i <= 3; i++) {
+		    	JLabel temp = new JLabel(new ImageIcon("images/" + hand2.discards.get(hand2.discards.size() - i).getSuit() + hand2.discards.get(hand2.discards.size() - i).getNumber()  + ".png"));
+		    	temp.setSize(new Dimension(45, 54));
+		    	p2DiscardTiles.add(temp);
+		    	p2DiscardPanel.add(temp);
+		    }
+		  p2DiscardPanel.revalidate();
+	  }
+  }
+  
   public void enableButtons(boolean enable) {
 	  Component[] components = handPanel.getComponents();
 	  

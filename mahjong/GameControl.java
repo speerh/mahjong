@@ -24,11 +24,6 @@ public class GameControl implements ActionListener
 	  GamePanel gamePanel = (GamePanel)container.getComponent(3);
     // Get the name of the button clicked.
     String command = ae.getActionCommand();
-        try {
-		client.sendToServer("TEST");
-	} catch (IOException e) {
-		// TODO Auto-generated catch block
-	}
     
     if(command.equalsIgnoreCase("d")) {
     	//DISCARD 	
@@ -38,6 +33,8 @@ public class GameControl implements ActionListener
     	try {
 			client.sendToServer(gamePanel.getDraw());
 			client.setTurn(false);
+	    	drawDiscards(gamePanel.getDraw());
+
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -54,6 +51,7 @@ public class GameControl implements ActionListener
 			// TODO Auto-generated catch block
 		
 		}
+    	drawDiscards(gamePanel.hand.getTile().get(index));
     	gamePanel.hand.removeTile(index);
     	//ADD IN DRAWN TILE
     	gamePanel.hand.addTile(gamePanel.getDraw());
@@ -81,6 +79,20 @@ public class GameControl implements ActionListener
   }
   public Boolean getTurn() {
 	  return turn;
+  }
+  
+  public void drawDiscards(Tile in) {
+	  System.out.println("REACHED 2");
+	  GamePanel gamePanel = (GamePanel)container.getComponent(3);
+	  gamePanel.hand.discards.add(in);
+	  gamePanel.drawDiscards();
+  }
+  
+  public void drawDiscards2(Tile in) {
+	  System.out.println("REACHED 2");
+	  GamePanel gamePanel = (GamePanel)container.getComponent(3);
+	  gamePanel.hand2.discards.add(in);
+	  gamePanel.p2Discards();
   }
   
   
