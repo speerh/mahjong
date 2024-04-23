@@ -11,7 +11,7 @@ public class ChatClient extends AbstractClient
   private CreateAccountControl createAccountControl;
   private GameControl gameControl;
   private Hand hand;
-  private Hand hand2;
+  private Hand hand2 = new Hand();
   private Boolean turn = false;
   private Yaku check;
 
@@ -37,7 +37,6 @@ public class ChatClient extends AbstractClient
   // Method that handles messages from the server.
   public void handleMessageFromServer(Object arg0)
   {
-	  System.out.println("Message from server" + arg0);
     // If we received a String, figure out what this event is.
     if (arg0 instanceof String)
     {
@@ -90,18 +89,7 @@ public class ChatClient extends AbstractClient
     	if(getTurn()) {
     		Hand test = hand;
     		test.addTile((Tile) arg0);
-    		if(check.checkWin(test)) {
-    			//send win to server
-    			try {
-					this.sendToServer(hand);
-				} catch (IOException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-				}
-    			//verify win
-    			//end game
-    		}
-    		
+    		System.out.println("DRAWN RECEIVED");
     		//if turn, this tile is the drawn tile
     		//update drawn tile
     		
@@ -109,6 +97,10 @@ public class ChatClient extends AbstractClient
     	else if(!getTurn()) {
     		//if NOT turn, this is the other player's discard
     		//add to other player discard
+    		System.out.println("DISCARD RECEIVED");
+    		System.out.println("REACHED 1");
+    		gameControl.drawDiscards2((Tile) arg0);
+    		
     	}
     }
   }
