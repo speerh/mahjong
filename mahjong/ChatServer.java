@@ -46,6 +46,86 @@ public class ChatServer extends AbstractServer {
 		status.setText("Listening");
 		status.setForeground(Color.GREEN);
 		log.append("Server started\n");
+		
+		Tile tile1 = center.getFirstTile();
+		center.removeFromCenter();
+		Tile tile2 = center.getFirstTile();
+		center.removeFromCenter();
+		Tile tile3 = center.getFirstTile();
+		center.removeFromCenter();
+		Tile tile4 = center.getFirstTile();
+		center.removeFromCenter();
+		Tile tile5 = center.getFirstTile();
+		center.removeFromCenter();
+		Tile tile6 = center.getFirstTile();
+		center.removeFromCenter();
+		Tile tile7 = center.getFirstTile();
+		center.removeFromCenter();
+		Tile tile8 = center.getFirstTile();
+		center.removeFromCenter();
+		Tile tile9 = center.getFirstTile();
+		center.removeFromCenter();
+		Tile tile10 = center.getFirstTile();
+		center.removeFromCenter();
+		Tile tile11 = center.getFirstTile();
+		center.removeFromCenter();
+		Tile tile12 = center.getFirstTile();
+		center.removeFromCenter();
+		Tile tile13 = center.getFirstTile();
+		center.removeFromCenter();
+		Tile tile14 = center.getFirstTile();
+		center.removeFromCenter();
+//		Tile tile1 = new Tile("bamboo", 2, false);
+//		Tile tile2 = new Tile("bamboo", 3, false);
+//		Tile tile3 = new Tile("bamboo", 4, false);
+//		Tile tile4 = new Tile("bamboo", 5, false);
+//		Tile tile5 = new Tile("bamboo", 6, false);
+//		Tile tile6 = new Tile("bamboo", 8, false);
+//		Tile tile7 = new Tile("bamboo", 2, false);
+//		Tile tile8 = new Tile("dragon", 2, false);
+//		Tile tile9 = new Tile("dragon", 1, false);
+//		Tile tile10 = new Tile("dragon", 3, true);
+//		Tile tile11 = new Tile("character", 9, false);
+//		Tile tile12 = new Tile("character", 5, false);
+//		Tile tile13 = new Tile("character", 8, true);
+//		Tile tile14 = new Tile("character", 3, true);
+		
+		hand.addTile(tile1);
+		hand.addTile(tile2);
+		hand.addTile(tile3);
+		hand.addTile(tile4);
+		hand.addTile(tile5);
+		hand.addTile(tile6);
+		hand.addTile(tile7);
+		hand.addTile(tile8);
+		hand.addTile(tile9);
+		hand.addTile(tile10);
+		hand.addTile(tile11);
+		hand.addTile(tile12);
+		hand.addTile(tile13);
+		hand.addTile(tile14);
+		
+//		for(Tile tile : hand.getTile()) {
+//			System.out.println(tile.getSuit() + " " + tile.getNumber());
+//		}
+//		System.out.println("--------------------------------------");
+//		
+//		ArrayList<Tile> newHand = hand.sort(hand);
+//		
+//		hand.setHand(newHand);
+//		
+//		for(Tile tile : hand.getTile()) {
+//			System.out.println(tile.getSuit() + " " + tile.getNumber());
+//		}
+//		boolean game = false;
+//		
+//		game = yaku.checkWin(hand);
+//		
+//		System.out.println("Does Hand Win?: " + game);
+		
+//		Tile tile = center.getFirstTile();
+//		String str = tile.getSuit();
+//		log.append(str);
 	}
 
 	public void serverStopped() {
@@ -67,7 +147,6 @@ public class ChatServer extends AbstractServer {
 	}
 
 	public void handleMessageFromClient(Object arg0, ConnectionToClient arg1) {
-		System.out.println(arg0);
 		if (arg0 instanceof LoginData) {
 			
 			if (client1 == null) {
@@ -95,7 +174,6 @@ public class ChatServer extends AbstractServer {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
-				
 			}
 			else{
 				System.out.println("Error executing query.");
@@ -107,12 +185,6 @@ public class ChatServer extends AbstractServer {
 				arg1.sendToClient(result);
 			} catch (IOException e) {
 				return;
-			}
-			//REMOVE LATER
-			if(client1 != null && client2 != null) {
-				//game start
-				gameStart(client1, client2);
-				
 			}
 
 		} else if (arg0 instanceof CreateAccountData) {
@@ -159,44 +231,18 @@ public class ChatServer extends AbstractServer {
 		//this can be arg0 instanceof hand because I think it's the only time that we send a hand obj
 		//99% of the time this SHOULD result in game end because i don't see any reason why yaku would trigger a win clientside and not the same win serverside
 		else if (arg0 instanceof Tile) {
-			Tile tile = new Tile("", 1, false);			
+			Tile tile = new Tile("", 1, false);
+			
 			tile = (Tile) arg0;
 			
 			if (arg1 == client1) {
-				System.out.println("CLIENT1 SENT SERVER TILE");
-				//send discard to client 2
 				try {
-					client2.sendToClient(tile);
-					System.out.println("SENT DISCARD TILE TO CLIENT1");
-
-				} catch (IOException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-				}
-				
-				//send turn to client 2
-				try {
-					System.out.println("CLIENT2 SENT TURN");
-
-					client2.sendToClient("TURN");
+					arg1.sendToClient("TURN");
 				} catch (IOException e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
 				try {
-					wait(500);
-				} catch (InterruptedException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-				}
-				//draw for client 2, send to client
-				System.out.println("CLIENT2 SENT TILE");
-
-				tile = center.getFirstTile();
-				center.removeFromCenter();
-				try {
-					System.out.println("CLIENT2 SENT DRAW");
-
 					client2.sendToClient(tile);
 				} catch (IOException e) {
 					// TODO Auto-generated catch block
@@ -204,77 +250,18 @@ public class ChatServer extends AbstractServer {
 				}
 			}
 			else if (arg1 == client2){
-				System.out.println("CLIENT2 SENT TILE");
-				//send discard to client 1
 				try {
-					System.out.println("CLIENT1 SENT DISCARD");
-
+					arg1.sendToClient("TURN");
+				} catch (IOException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+				try {
 					client1.sendToClient(tile);
 				} catch (IOException e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
-				//send turn to client 1
-				try {
-					System.out.println("CLIENT1 SENT TURN");
-					client1.sendToClient("TURN");
-				} catch (IOException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-				}
-				try {
-					wait(500);
-				} catch (InterruptedException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-				}
-				//draw for client 1, send to client
-				tile = center.getFirstTile();
-				center.removeFromCenter();
-				try {
-					System.out.println("CLIENT1 SENT DRAW");
-					client1.sendToClient(tile);
-				} catch (IOException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-				}
-			}else if (arg0 instanceof String) {
-				
-				if (arg0 == "WIN") {
-					if(arg1 == client1) {
-						try {
-							client1.sendToClient("WIN");
-						} catch (IOException e) {
-							// TODO Auto-generated catch block
-							e.printStackTrace();
-						}
-						
-						try {
-							client2.sendToClient("LOSE");
-						} catch (IOException e) {
-							// TODO Auto-generated catch block
-							e.printStackTrace();
-						}
-					} else if (arg1 == client2) {
-						try {
-							client2.sendToClient("WIN");
-						} catch (IOException e) {
-							// TODO Auto-generated catch block
-							e.printStackTrace();
-						}
-						try {
-							client1.sendToClient("LOSE");
-						} catch (IOException e) {
-							// TODO Auto-generated catch block
-							e.printStackTrace();
-						}
-					}
-					
-				}
-					
-				
-				
-				
 			}
 		}
 
@@ -287,33 +274,4 @@ public class ChatServer extends AbstractServer {
 		log.append("Listening exception: " + exception.getMessage() + "\n");
 		log.append("Press Listen to restart server\n");
 	}
-	
-	public void gameStart(ConnectionToClient p1, ConnectionToClient p2) {
-        Boolean gameEnd = false;
-        Hand hand = new Hand();
-        hand = center.genFirstHand();
-
-        try {
-            p1.sendToClient(hand);
-        } catch (IOException e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
-        }
-
-        hand = center.genFirstHand();
-
-        try {
-            p2.sendToClient(hand);
-        } catch (IOException e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
-        }
-
-        try {
-            p1.sendToClient("TURN");
-        } catch (IOException e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
-        }
-    }
 }
