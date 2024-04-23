@@ -72,7 +72,6 @@ public class GameControl implements ActionListener
   public void setTurn(Boolean in) {
 	  GamePanel gamePanel = (GamePanel)container.getComponent(3);
 	  turn = in;
-	  System.out.println("TURN: " + in);
 	  gamePanel.enableButtons(turn);
 	  
 	  
@@ -82,17 +81,31 @@ public class GameControl implements ActionListener
   }
   
   public void drawDiscards(Tile in) {
-	  System.out.println("REACHED 2");
 	  GamePanel gamePanel = (GamePanel)container.getComponent(3);
 	  gamePanel.hand.discards.add(in);
 	  gamePanel.drawDiscards();
   }
   
   public void drawDiscards2(Tile in) {
-	  System.out.println("REACHED 2");
 	  GamePanel gamePanel = (GamePanel)container.getComponent(3);
 	  gamePanel.hand2.discards.add(in);
 	  gamePanel.p2Discards();
+  }
+  
+  public void redrawDrawn(Tile in) {
+	  System.out.println("STARTING REDRAW OF DRAWN TILE");
+	  System.out.println("DRAWN TILE: " + in.getSuit() + in.getNumber());
+
+	  GamePanel gamePanel = (GamePanel)container.getComponent(3);
+	  gamePanel.setDraw(in);
+	  enableDrawn();
+	  gamePanel.redrawDraw();
+  }
+  
+  public void enableDrawn() {
+	  System.out.println("ENABLING DRAWN TILE");
+	  GamePanel gamePanel = (GamePanel)container.getComponent(3);
+	  gamePanel.drawVisible(true);
   }
   
   
