@@ -369,12 +369,31 @@ public class ChatServer extends AbstractServer {
 	}
 	
 	public void gameStart(ConnectionToClient p1, ConnectionToClient p2) {
-		Boolean gameEnd = false;
-		try {
-			p1.sendToClient("TURN");
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-	}
+        Boolean gameEnd = false;
+        Hand hand = new Hand();
+        hand = center.genFirstHand();
+
+        try {
+            p1.sendToClient(hand);
+        } catch (IOException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+
+        hand = center.genFirstHand();
+
+        try {
+            p2.sendToClient(hand);
+        } catch (IOException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+
+        try {
+            p1.sendToClient("TURN");
+        } catch (IOException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+    }
 }
