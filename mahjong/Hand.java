@@ -33,7 +33,7 @@ public class Hand implements Serializable{
 	public void setHand(ArrayList<Tile> tiles) {
 		this.tiles = tiles;
 	}
-	public ArrayList<Tile> sort(Hand hand){
+	public Hand sort(Hand hand){
 		ArrayList<Tile> character = new ArrayList<Tile>();
 		ArrayList<Tile> circle = new ArrayList<Tile>();
 		ArrayList<Tile> bamboo = new ArrayList<Tile>();
@@ -67,6 +67,13 @@ public class Hand implements Serializable{
 		sortedHand.addAll(dragon);
 		sortedHand.addAll(wind);
 		
-		return sortedHand;
+		Hand hand2 = new Hand();
+		
+		for (Tile tile : sortedHand)
+		{
+			hand2.addTile(tile);
+		}
+		
+		return hand2;
 	}
 }
