@@ -12,6 +12,8 @@ public class Yaku {
 	private ArrayList<String> newTiles = new ArrayList<String>();
 
 	public boolean checkWin(Hand hand) {
+		System.out.println("WIN checking");
+
 		int counter = 0;
 
 		for (Tile tile : hand.getTile()) {

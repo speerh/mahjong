@@ -60,10 +60,10 @@ public class ChatClient extends AbstractClient
     	  gameControl.setTurn(true);
       }
       else if(message.equals("WIN")) {
-    	  
+    	  gameControl.gameWin();
       }
       else if(message.equals("LOSE")) {
-    	  
+    	  gameControl.gameLose();
       }
       
     }
@@ -97,6 +97,17 @@ public class ChatClient extends AbstractClient
     		System.out.println("DRAWN RECEIVED");
     		//if turn, this tile is the drawn tile
     		//update drawn tile
+    		check = new Yaku();
+    		if(check.checkWin(gameControl.getHand())) {
+    			try {
+					this.sendToServer("WIN");
+				} catch (IOException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+    		}
+			System.out.println("WIN NOT TRIGGERED");
+
     		
     	}
     	else if(!getTurn()) {
@@ -121,4 +132,5 @@ public class ChatClient extends AbstractClient
   public Boolean getTurn() {
 	  return turn;
   }
+  
 }
