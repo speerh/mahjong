@@ -147,6 +147,7 @@ public class ChatServer extends AbstractServer {
 	}
 
 	public void handleMessageFromClient(Object arg0, ConnectionToClient arg1) {
+		System.out.println(arg0);
 		if (arg0 instanceof LoginData) {
 			
 			if (client1 == null) {
@@ -174,6 +175,7 @@ public class ChatServer extends AbstractServer {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
+				
 			}
 			else{
 				System.out.println("Error executing query.");
@@ -185,6 +187,12 @@ public class ChatServer extends AbstractServer {
 				arg1.sendToClient(result);
 			} catch (IOException e) {
 				return;
+			}
+			//REMOVE LATER
+			if(client1 != null && client2 != null) {
+				//game start
+				gameStart(client1, client2);
+				
 			}
 
 		} else if (arg0 instanceof CreateAccountData) {
@@ -231,18 +239,44 @@ public class ChatServer extends AbstractServer {
 		//this can be arg0 instanceof hand because I think it's the only time that we send a hand obj
 		//99% of the time this SHOULD result in game end because i don't see any reason why yaku would trigger a win clientside and not the same win serverside
 		else if (arg0 instanceof Tile) {
-			Tile tile = new Tile("", 1, false);
-			
+			Tile tile = new Tile("", 1, false);			
 			tile = (Tile) arg0;
 			
 			if (arg1 == client1) {
+				System.out.println("CLIENT1 SENT SERVER TILE");
+				//send discard to client 2
 				try {
-					arg1.sendToClient("TURN");
+					client2.sendToClient(tile);
+					System.out.println("SENT DISCARD TILE TO CLIENT1");
+
+				} catch (IOException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+				
+				//send turn to client 2
+				try {
+					System.out.println("CLIENT2 SENT TURN");
+
+					client2.sendToClient("TURN");
 				} catch (IOException e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
 				try {
+					wait(500);
+				} catch (InterruptedException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+				//draw for client 2, send to client
+				System.out.println("CLIENT2 SENT TILE");
+
+				tile = center.getFirstTile();
+				center.removeFromCenter();
+				try {
+					System.out.println("CLIENT2 SENT DRAW");
+
 					client2.sendToClient(tile);
 				} catch (IOException e) {
 					// TODO Auto-generated catch block
@@ -250,18 +284,77 @@ public class ChatServer extends AbstractServer {
 				}
 			}
 			else if (arg1 == client2){
+				System.out.println("CLIENT2 SENT TILE");
+				//send discard to client 1
 				try {
-					arg1.sendToClient("TURN");
-				} catch (IOException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-				}
-				try {
+					System.out.println("CLIENT1 SENT DISCARD");
+
 					client1.sendToClient(tile);
 				} catch (IOException e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
+				//send turn to client 1
+				try {
+					System.out.println("CLIENT1 SENT TURN");
+					client1.sendToClient("TURN");
+				} catch (IOException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+				try {
+					wait(500);
+				} catch (InterruptedException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+				//draw for client 1, send to client
+				tile = center.getFirstTile();
+				center.removeFromCenter();
+				try {
+					System.out.println("CLIENT1 SENT DRAW");
+					client1.sendToClient(tile);
+				} catch (IOException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+			}else if (arg0 instanceof String) {
+				
+				if (arg0 == "WIN") {
+					if(arg1 == client1) {
+						try {
+							client1.sendToClient("WIN");
+						} catch (IOException e) {
+							// TODO Auto-generated catch block
+							e.printStackTrace();
+						}
+						
+						try {
+							client2.sendToClient("LOSE");
+						} catch (IOException e) {
+							// TODO Auto-generated catch block
+							e.printStackTrace();
+						}
+					} else if (arg1 == client2) {
+						try {
+							client2.sendToClient("WIN");
+						} catch (IOException e) {
+							// TODO Auto-generated catch block
+							e.printStackTrace();
+						}
+						try {
+							client1.sendToClient("LOSE");
+						} catch (IOException e) {
+							// TODO Auto-generated catch block
+							e.printStackTrace();
+						}
+					}
+					
+				}
+					
+				
+				
+				
 			}
 		}
 
@@ -274,4 +367,33 @@ public class ChatServer extends AbstractServer {
 		log.append("Listening exception: " + exception.getMessage() + "\n");
 		log.append("Press Listen to restart server\n");
 	}
+	
+	public void gameStart(ConnectionToClient p1, ConnectionToClient p2) {
+        Boolean gameEnd = false;
+        Hand hand = new Hand();
+        hand = center.genFirstHand();
+
+        try {
+            p1.sendToClient(hand);
+        } catch (IOException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+
+        hand = center.genFirstHand();
+
+        try {
+            p2.sendToClient(hand);
+        } catch (IOException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+
+        try {
+            p1.sendToClient("TURN");
+        } catch (IOException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+    }
 }
