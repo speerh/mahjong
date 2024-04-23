@@ -1,8 +1,10 @@
-package mahjong;
+package testCases;
 
 import static org.junit.Assert.*;
 
 import org.junit.Test;
+
+import mahjong.Tile;
 
 public class TileTest {
 
