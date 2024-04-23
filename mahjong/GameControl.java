@@ -108,5 +108,17 @@ public class GameControl implements ActionListener
 	  gamePanel.drawVisible(true);
   }
   
+  public void gameWin() {
+	  GamePanel gamePanel = (GamePanel)container.getComponent(3);
+	    ClientGUI clientGUI = (ClientGUI)SwingUtilities.getWindowAncestor(gamePanel);
+	    CardLayout cardLayout = (CardLayout)container.getLayout();
+	    cardLayout.show(container, "5");
+  }
   
+  public void gameLose() {
+	  GamePanel gamePanel = (GamePanel)container.getComponent(3);
+	    ClientGUI clientGUI = (ClientGUI)SwingUtilities.getWindowAncestor(gamePanel);
+	    CardLayout cardLayout = (CardLayout)container.getLayout();
+	    cardLayout.show(container, "6");
+  }
 }

@@ -105,6 +105,7 @@ public class GamePanel extends JPanel
 	  handPanel.removeAll();
 	  ArrayList<JButton> tileButtons = new ArrayList();
 	  
+	  hand = hand.sort(hand);
 	    for (int i = 0; i < 13; i++) {
 	    	JButton temp = new JButton(new ImageIcon("images/" + hand.getTile().get(i).getSuit() + hand.getTile().get(i).getNumber() + ".png"));
 	    	temp.setContentAreaFilled(false);
@@ -208,5 +209,6 @@ public class GamePanel extends JPanel
     	  drawVisible(false);
       }
   }
+ 
   
 }

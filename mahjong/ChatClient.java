@@ -59,6 +59,12 @@ public class ChatClient extends AbstractClient
     	  setTurn(true);
     	  gameControl.setTurn(true);
       }
+      else if(message.equals("WIN")) {
+    	  
+      }
+      else if(message.equals("LOSE")) {
+    	  
+      }
       
     }
     //if msg is hand
