@@ -275,7 +275,7 @@ public class ChatServer extends AbstractServer {
 				tile = center.getFirstTile();
 				center.removeFromCenter();
 				try {
-					System.out.println("CLIENT2 SENT TRAW");
+					System.out.println("CLIENT2 SENT DRAW");
 
 					client2.sendToClient(tile);
 				} catch (IOException e) {
@@ -318,6 +318,43 @@ public class ChatServer extends AbstractServer {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
+			}else if (arg0 instanceof String) {
+				
+				if (arg0 == "WIN") {
+					if(arg1 == client1) {
+						try {
+							client1.sendToClient("WIN");
+						} catch (IOException e) {
+							// TODO Auto-generated catch block
+							e.printStackTrace();
+						}
+						
+						try {
+							client2.sendToClient("LOSE");
+						} catch (IOException e) {
+							// TODO Auto-generated catch block
+							e.printStackTrace();
+						}
+					} else if (arg1 == client2) {
+						try {
+							client2.sendToClient("WIN");
+						} catch (IOException e) {
+							// TODO Auto-generated catch block
+							e.printStackTrace();
+						}
+						try {
+							client1.sendToClient("LOSE");
+						} catch (IOException e) {
+							// TODO Auto-generated catch block
+							e.printStackTrace();
+						}
+					}
+					
+				}
+					
+				
+				
+				
 			}
 		}
 
