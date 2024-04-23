@@ -11,7 +11,7 @@ public class ChatClient extends AbstractClient
   private CreateAccountControl createAccountControl;
   private GameControl gameControl;
   private Hand hand;
-  private Hand hand2;
+  private Hand hand2 = new Hand();
   private Boolean turn = false;
   private Yaku check;
 
@@ -98,6 +98,8 @@ public class ChatClient extends AbstractClient
     		//if NOT turn, this is the other player's discard
     		//add to other player discard
     		System.out.println("DISCARD RECEIVED");
+    		System.out.println("REACHED 1");
+    		gameControl.drawDiscards2((Tile) arg0);
     		
     	}
     }
