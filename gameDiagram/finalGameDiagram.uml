@@ -1,0 +1,641 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_ppL-wAEfEe-pl7DLWeTXZw" name="finalGameDiagram">
+  <packageImport xmi:type="uml:PackageImport" xmi:id="_ppcdcAEfEe-pl7DLWeTXZw">
+    <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+  </packageImport>
+  <packagedElement xmi:type="uml:Class" xmi:id="_r7W1sAEfEe-pl7DLWeTXZw" name="GameControl">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_r7W1sQEfEe-pl7DLWeTXZw" name="container">
+      <type xmi:type="uml:Class" href="../../ClassDiagrams/model.uml#_3i7_AhcpEeiw04JpNeJnEA"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_r7W1sgEfEe-pl7DLWeTXZw" name="client">
+      <type xmi:type="uml:OpaqueBehavior" href="../../ClassDiagrams/model.uml#_3hJPQhcpEeiw04JpNeJnEA"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_r7W1swEfEe-pl7DLWeTXZw">
+      <type xmi:type="uml:Class" href="../ProgramDocumentation/FinalClassDiagram.uml#_MqkoIAATEe-Tab37-n95bg"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_r7W1tAEfEe-pl7DLWeTXZw"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_r7W1tQEfEe-pl7DLWeTXZw" value="1"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_su-D8AEfEe-pl7DLWeTXZw" name="container">
+      <type xmi:type="uml:Class" href="../../ClassDiagrams/model.uml#_3i7_AhcpEeiw04JpNeJnEA"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_su-rAAEfEe-pl7DLWeTXZw" name="client">
+      <type xmi:type="uml:OpaqueBehavior" href="../../ClassDiagrams/model.uml#_3hJPQhcpEeiw04JpNeJnEA"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_40KUIwEfEe-pl7DLWeTXZw" type="_x_SuEAEfEe-pl7DLWeTXZw" association="_40KUIAEfEe-pl7DLWeTXZw">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_40KUJAEfEe-pl7DLWeTXZw"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_40KUJQEfEe-pl7DLWeTXZw" value="1"/>
+    </ownedAttribute>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_r7W1tgEfEe-pl7DLWeTXZw" name="GameControl">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_r7W1twEfEe-pl7DLWeTXZw" name="container">
+        <type xmi:type="uml:Class" href="../../ClassDiagrams/model.uml#_3i7_AhcpEeiw04JpNeJnEA"/>
+      </ownedParameter>
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_r7W1uAEfEe-pl7DLWeTXZw" name="client">
+        <type xmi:type="uml:Class" href="../ProgramDocumentation/FinalClassDiagram.uml#_MqkoIAATEe-Tab37-n95bg"/>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_su9c4AEfEe-pl7DLWeTXZw" name="GameControl">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_su9c4QEfEe-pl7DLWeTXZw" name="container">
+        <type xmi:type="uml:Class" href="../../ClassDiagrams/model.uml#_3i7_AhcpEeiw04JpNeJnEA"/>
+      </ownedParameter>
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_su9c4gEfEe-pl7DLWeTXZw" name="client">
+        <type xmi:type="uml:Class" href="../ProgramDocumentation/FinalClassDiagram.uml#_MqkoIAATEe-Tab37-n95bg"/>
+      </ownedParameter>
+    </ownedOperation>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_v0C-gAEfEe-pl7DLWeTXZw" name="GamePanel">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_4Z1IkgEfEe-pl7DLWeTXZw" type="_r7W1sAEfEe-pl7DLWeTXZw" association="_4Z0hgAEfEe-pl7DLWeTXZw">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_4Z1IkwEfEe-pl7DLWeTXZw"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_4Z1IlAEfEe-pl7DLWeTXZw" value="1"/>
+    </ownedAttribute>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_xAFT0AEfEe-pl7DLWeTXZw" name="gamePanel">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_xAFT0QEfEe-pl7DLWeTXZw" name="gc">
+        <type xmi:type="uml:Class" href="../ProgramDocumentation/FinalClassDiagram.uml#_lmJU4AATEe-Tab37-n95bg"/>
+      </ownedParameter>
+    </ownedOperation>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_x_SuEAEfEe-pl7DLWeTXZw" name="ChatClient">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_x_SuEQEfEe-pl7DLWeTXZw" name="loginControl">
+      <type xmi:type="uml:Class" href="../ProgramDocumentation/FinalClassDiagram.uml#_BnITYAAUEe-Tab37-n95bg"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_x_SuEgEfEe-pl7DLWeTXZw" name="createAccountControl">
+      <type xmi:type="uml:Class" href="../ProgramDocumentation/FinalClassDiagram.uml#_hydA0AATEe-Tab37-n95bg"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_y12ioAEfEe-pl7DLWeTXZw" name="loginControl">
+      <type xmi:type="uml:Class" href="../ProgramDocumentation/FinalClassDiagram.uml#_BnITYAAUEe-Tab37-n95bg"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_y14X0AEfEe-pl7DLWeTXZw" name="createAccountControl">
+      <type xmi:type="uml:Class" href="../ProgramDocumentation/FinalClassDiagram.uml#_hydA0AATEe-Tab37-n95bg"/>
+    </ownedAttribute>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_x_SuEwEfEe-pl7DLWeTXZw" name="setCreateAccountControl">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_x_SuFAEfEe-pl7DLWeTXZw" name="createAccountControl">
+        <type xmi:type="uml:OpaqueBehavior" href="../../ClassDiagrams/model.uml#_3j-g0BcpEeiw04JpNeJnEA"/>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_x_SuFQEfEe-pl7DLWeTXZw" name="handleMessageFromServer">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_x_SuFgEfEe-pl7DLWeTXZw" name="arg0">
+        <type xmi:type="uml:Class" href="../../ClassDiagrams/model.uml#_3hTAQhcpEeiw04JpNeJnEA"/>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_x_SuFwEfEe-pl7DLWeTXZw" name="setLoginControl">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_x_SuGAEfEe-pl7DLWeTXZw" name="loginControl">
+        <type xmi:type="uml:OpaqueBehavior" href="../../ClassDiagrams/model.uml#_3mgQZRcpEeiw04JpNeJnEA"/>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_y11UgAEfEe-pl7DLWeTXZw" name="handleMessageFromServer">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_y11UgQEfEe-pl7DLWeTXZw" name="arg0">
+        <type xmi:type="uml:Class" href="../../ClassDiagrams/model.uml#_3hTAQhcpEeiw04JpNeJnEA"/>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_y13JsAEfEe-pl7DLWeTXZw" name="setCreateAccountControl">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_y13JsQEfEe-pl7DLWeTXZw" name="createAccountControl">
+        <type xmi:type="uml:OpaqueBehavior" href="../../ClassDiagrams/model.uml#_3j-g0BcpEeiw04JpNeJnEA"/>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_y14-4AEfEe-pl7DLWeTXZw" name="setLoginControl">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_y14-4QEfEe-pl7DLWeTXZw" name="loginControl">
+        <type xmi:type="uml:OpaqueBehavior" href="../../ClassDiagrams/model.uml#_3mgQZRcpEeiw04JpNeJnEA"/>
+      </ownedParameter>
+    </ownedOperation>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_4Z0hgAEfEe-pl7DLWeTXZw" memberEnd="_4Z1IkgEfEe-pl7DLWeTXZw _4Z1IlQEfEe-pl7DLWeTXZw">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_4Z1IkAEfEe-pl7DLWeTXZw" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_4Z1IkQEfEe-pl7DLWeTXZw" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_4Z1IlQEfEe-pl7DLWeTXZw" type="_v0C-gAEfEe-pl7DLWeTXZw" association="_4Z0hgAEfEe-pl7DLWeTXZw"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_40KUIAEfEe-pl7DLWeTXZw" memberEnd="_40KUIwEfEe-pl7DLWeTXZw _40KUJgEfEe-pl7DLWeTXZw">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_40KUIQEfEe-pl7DLWeTXZw" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_40KUIgEfEe-pl7DLWeTXZw" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_40KUJgEfEe-pl7DLWeTXZw" type="_r7W1sAEfEe-pl7DLWeTXZw" association="_40KUIAEfEe-pl7DLWeTXZw"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_-NZCoAEfEe-pl7DLWeTXZw" name="ChatServer" visibility="package">
+    <generalization xmi:type="uml:Generalization" xmi:id="_-NZCoQEfEe-pl7DLWeTXZw">
+      <general xmi:type="uml:Class" href="../../ClassDiagrams/model.uml#_3hcxQhcpEeiw04JpNeJnEA"/>
+    </generalization>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_-NZCogEfEe-pl7DLWeTXZw" name="log" visibility="private" isUnique="false">
+      <type xmi:type="uml:Class" href="../../ClassDiagrams/model.uml#_3hl7MhcpEeiw04JpNeJnEA"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_-NZCowEfEe-pl7DLWeTXZw" name="status" visibility="private" isUnique="false">
+      <type xmi:type="uml:Class" href="../../ClassDiagrams/model.uml#_3hl7NRcpEeiw04JpNeJnEA"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_-NZCpAEfEe-pl7DLWeTXZw" name="running" visibility="private" isUnique="false">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_vAIV4I7PEdySGvm5GN66HA"/>
+      <defaultValue xmi:type="uml:OpaqueExpression" xmi:id="_-NZCpQEfEe-pl7DLWeTXZw" name="defaultValue">
+        <language>JAVA</language>
+        <body>false</body>
+      </defaultValue>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_-NZCpgEfEe-pl7DLWeTXZw" name="database" visibility="private" isUnique="false">
+      <type xmi:type="uml:Class" href="../../ClassDiagrams/model.uml#_3h42IhcpEeiw04JpNeJnEA"/>
+      <defaultValue xmi:type="uml:OpaqueExpression" xmi:id="_-NZCpwEfEe-pl7DLWeTXZw" name="defaultValue">
+        <language>JAVA</language>
+        <body>new DatabaseFile()</body>
+      </defaultValue>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_-NZCqAEfEe-pl7DLWeTXZw" name="log">
+      <type xmi:type="uml:Class" href="../../ClassDiagrams/model.uml#_3hl7MhcpEeiw04JpNeJnEA"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_-NZCqQEfEe-pl7DLWeTXZw" name="status">
+      <type xmi:type="uml:Class" href="../../ClassDiagrams/model.uml#_3hl7NRcpEeiw04JpNeJnEA"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_-NZCqgEfEe-pl7DLWeTXZw" name="active">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_-NZCqwEfEe-pl7DLWeTXZw" name="accountUsernames">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_-NZCrAEfEe-pl7DLWeTXZw" name="accountPasswords">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_-NZCrQEfEe-pl7DLWeTXZw" name="log">
+      <type xmi:type="uml:Class" href="../../ClassDiagrams/model.uml#_3hl7MhcpEeiw04JpNeJnEA"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_-NZCrgEfEe-pl7DLWeTXZw" name="status">
+      <type xmi:type="uml:Class" href="../../ClassDiagrams/model.uml#_3hl7NRcpEeiw04JpNeJnEA"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_-NZCrwEfEe-pl7DLWeTXZw" name="running">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_-NZCsAEfEe-pl7DLWeTXZw" name="database">
+      <type xmi:type="uml:Class" href="../../ClassDiagrams/model.uml#_3h42IhcpEeiw04JpNeJnEA"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_-NZCsQEfEe-pl7DLWeTXZw" name="dml">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_-NZCsgEfEe-pl7DLWeTXZw" name="center">
+      <type xmi:type="uml:Class" href="../ProgramDocumentation/FinalClassDiagram.uml#_jT4CMAAREe-Tab37-n95bg"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_-NZCswEfEe-pl7DLWeTXZw" name="hand" type="_-NZpsAEfEe-pl7DLWeTXZw"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_-NZCtAEfEe-pl7DLWeTXZw" name="yaku">
+      <type xmi:type="uml:Class" href="../ProgramDocumentation/FinalClassDiagram.uml#_ulSFAAAREe-Tab37-n95bg"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_BAXgkAEgEe-pl7DLWeTXZw" name="hand">
+      <type xmi:type="uml:Class" href="../ProgramDocumentation/FinalClassDiagram.uml#_FGzvAAADEe-6QPnukVl3fQ"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_BAgDcAEgEe-pl7DLWeTXZw" name="center">
+      <type xmi:type="uml:Class" href="../ProgramDocumentation/FinalClassDiagram.uml#_jT4CMAAREe-Tab37-n95bg"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_BAmxIAEgEe-pl7DLWeTXZw" name="running">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_BAomUAEgEe-pl7DLWeTXZw" name="dml">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_BAxwQAEgEe-pl7DLWeTXZw" name="log">
+      <type xmi:type="uml:Class" href="../../ClassDiagrams/model.uml#_3hl7MhcpEeiw04JpNeJnEA"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_BA0MgAEgEe-pl7DLWeTXZw" name="status">
+      <type xmi:type="uml:Class" href="../../ClassDiagrams/model.uml#_3hl7NRcpEeiw04JpNeJnEA"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_BA99gAEgEe-pl7DLWeTXZw" name="database">
+      <type xmi:type="uml:Class" href="../../ClassDiagrams/model.uml#_3h42IhcpEeiw04JpNeJnEA"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_BBAZwAEgEe-pl7DLWeTXZw" name="yaku">
+      <type xmi:type="uml:Class" href="../ProgramDocumentation/FinalClassDiagram.uml#_ulSFAAAREe-Tab37-n95bg"/>
+    </ownedAttribute>
+    <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_-NZCtQEfEe-pl7DLWeTXZw" name="ChatServer" specification="_-NZCvwEfEe-pl7DLWeTXZw">
+      <language>JAVA</language>
+      <body>&#xD;
+    super(12345);&#xD;
+    this.setTimeout(500);&#xD;
+</body>
+    </ownedBehavior>
+    <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_-NZCtgEfEe-pl7DLWeTXZw" name="isRunning" specification="_-NZCwAEfEe-pl7DLWeTXZw">
+      <language>JAVA</language>
+      <body>&#xD;
+    return running;&#xD;
+</body>
+    </ownedBehavior>
+    <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_-NZCtwEfEe-pl7DLWeTXZw" name="setLog" specification="_-NZCwgEfEe-pl7DLWeTXZw">
+      <language>JAVA</language>
+      <body>&#xD;
+    this.log = log;&#xD;
+</body>
+    </ownedBehavior>
+    <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_-NZCuAEfEe-pl7DLWeTXZw" name="setStatus" specification="_-NZCxAEfEe-pl7DLWeTXZw">
+      <language>JAVA</language>
+      <body>&#xD;
+    this.status = status;&#xD;
+</body>
+    </ownedBehavior>
+    <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_-NZCuQEfEe-pl7DLWeTXZw" name="serverStarted" specification="_-NZCxgEfEe-pl7DLWeTXZw">
+      <language>JAVA</language>
+      <body>&#xD;
+    running = true;&#xD;
+    status.setText(&quot;Listening&quot;);&#xD;
+    status.setForeground(Color.GREEN);&#xD;
+    log.append(&quot;Server started\n&quot;);&#xD;
+</body>
+    </ownedBehavior>
+    <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_-NZCugEfEe-pl7DLWeTXZw" name="serverStopped" specification="_-NZCxwEfEe-pl7DLWeTXZw">
+      <language>JAVA</language>
+      <body>&#xD;
+    status.setText(&quot;Stopped&quot;);&#xD;
+    status.setForeground(Color.RED);&#xD;
+    log.append(&quot;Server stopped accepting new clients - press Listen to start accepting new clients\n&quot;);&#xD;
+</body>
+    </ownedBehavior>
+    <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_-NZCuwEfEe-pl7DLWeTXZw" name="serverClosed" specification="_-NZCyAEfEe-pl7DLWeTXZw">
+      <language>JAVA</language>
+      <body>&#xD;
+    running = false;&#xD;
+    status.setText(&quot;Close&quot;);&#xD;
+    status.setForeground(Color.RED);&#xD;
+    log.append(&quot;Server and all current clients are closed - press Listen to restart\n&quot;);&#xD;
+</body>
+    </ownedBehavior>
+    <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_-NZCvAEfEe-pl7DLWeTXZw" name="clientConnected" specification="_-NZCyQEfEe-pl7DLWeTXZw">
+      <language>JAVA</language>
+      <body>&#xD;
+    log.append(&quot;Client &quot; + client.getId() + &quot; connected\n&quot;);&#xD;
+</body>
+    </ownedBehavior>
+    <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_-NZCvQEfEe-pl7DLWeTXZw" name="handleMessageFromClient" specification="_-NZCywEfEe-pl7DLWeTXZw">
+      <language>JAVA</language>
+      <body>&#xD;
+    // If we received LoginData, verify the account information.&#xD;
+    if (arg0 instanceof LoginData) {&#xD;
+        // Check the username and password with the database.&#xD;
+        LoginData data = (LoginData) arg0;&#xD;
+        Object result;&#xD;
+        if (database.verifyAccount(data.getUsername(), data.getPassword())) {&#xD;
+            result = &quot;LoginSuccessful&quot;;&#xD;
+            log.append(&quot;Client &quot; + arg1.getId() + &quot; successfully logged in as &quot; + data.getUsername() + &quot;\n&quot;);&#xD;
+        } else {&#xD;
+            result = new Error(&quot;The username and password are incorrect.&quot;, &quot;Login&quot;);&#xD;
+            log.append(&quot;Client &quot; + arg1.getId() + &quot; failed to log in\n&quot;);&#xD;
+        }&#xD;
+        // Send the result to the client.&#xD;
+        try {&#xD;
+            arg1.sendToClient(result);&#xD;
+        } catch (IOException e) {&#xD;
+            return;&#xD;
+        }&#xD;
+    } else // If we received CreateAccountData, create a new account.&#xD;
+    if (arg0 instanceof CreateAccountData) {&#xD;
+        // Try to create the account.&#xD;
+        CreateAccountData data = (CreateAccountData) arg0;&#xD;
+        Object result;&#xD;
+        if (database.createNewAccount(data.getUsername(), data.getPassword())) {&#xD;
+            result = &quot;CreateAccountSuccessful&quot;;&#xD;
+            log.append(&quot;Client &quot; + arg1.getId() + &quot; created a new account called &quot; + data.getUsername() + &quot;\n&quot;);&#xD;
+        } else {&#xD;
+            result = new Error(&quot;The username is already in use.&quot;, &quot;CreateAccount&quot;);&#xD;
+            log.append(&quot;Client &quot; + arg1.getId() + &quot; failed to create a new account\n&quot;);&#xD;
+        }&#xD;
+        // Send the result to the client.&#xD;
+        try {&#xD;
+            arg1.sendToClient(result);&#xD;
+        } catch (IOException e) {&#xD;
+            return;&#xD;
+        }&#xD;
+    }&#xD;
+</body>
+    </ownedBehavior>
+    <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_-NZCvgEfEe-pl7DLWeTXZw" name="listeningException" specification="_-NZCzgEfEe-pl7DLWeTXZw">
+      <language>JAVA</language>
+      <body>&#xD;
+    running = false;&#xD;
+    status.setText(&quot;Exception occurred while listening&quot;);&#xD;
+    status.setForeground(Color.RED);&#xD;
+    log.append(&quot;Listening exception: &quot; + exception.getMessage() + &quot;\n&quot;);&#xD;
+    log.append(&quot;Press Listen to restart server\n&quot;);&#xD;
+</body>
+    </ownedBehavior>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_-NZCvwEfEe-pl7DLWeTXZw" name="ChatServer" visibility="public" method="_-NZCtQEfEe-pl7DLWeTXZw"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_-NZCwAEfEe-pl7DLWeTXZw" name="isRunning" visibility="public" method="_-NZCtgEfEe-pl7DLWeTXZw">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_-NZCwQEfEe-pl7DLWeTXZw" direction="return">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_vAIV4I7PEdySGvm5GN66HA"/>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_-NZCwgEfEe-pl7DLWeTXZw" name="setLog" visibility="public" method="_-NZCtwEfEe-pl7DLWeTXZw">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_-NZCwwEfEe-pl7DLWeTXZw" name="log">
+        <type xmi:type="uml:Class" href="../../ClassDiagrams/model.uml#_3hl7MhcpEeiw04JpNeJnEA"/>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_-NZCxAEfEe-pl7DLWeTXZw" name="setStatus" visibility="public" method="_-NZCuAEfEe-pl7DLWeTXZw">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_-NZCxQEfEe-pl7DLWeTXZw" name="status">
+        <type xmi:type="uml:Class" href="../../ClassDiagrams/model.uml#_3hl7NRcpEeiw04JpNeJnEA"/>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_-NZCxgEfEe-pl7DLWeTXZw" name="serverStarted" visibility="public" method="_-NZCuQEfEe-pl7DLWeTXZw"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_-NZCxwEfEe-pl7DLWeTXZw" name="serverStopped" visibility="public" method="_-NZCugEfEe-pl7DLWeTXZw"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_-NZCyAEfEe-pl7DLWeTXZw" name="serverClosed" visibility="public" method="_-NZCuwEfEe-pl7DLWeTXZw"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_-NZCyQEfEe-pl7DLWeTXZw" name="clientConnected" visibility="public" method="_-NZCvAEfEe-pl7DLWeTXZw">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_-NZCygEfEe-pl7DLWeTXZw" name="client">
+        <type xmi:type="uml:Class" href="../../ClassDiagrams/model.uml#_3iViGBcpEeiw04JpNeJnEA"/>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_-NZCywEfEe-pl7DLWeTXZw" name="handleMessageFromClient" visibility="public" method="_-NZCvQEfEe-pl7DLWeTXZw">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_-NZCzAEfEe-pl7DLWeTXZw" name="arg0">
+        <type xmi:type="uml:Class" href="../../ClassDiagrams/model.uml#_3hTAQhcpEeiw04JpNeJnEA"/>
+      </ownedParameter>
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_-NZCzQEfEe-pl7DLWeTXZw" name="arg1">
+        <type xmi:type="uml:Class" href="../../ClassDiagrams/model.uml#_3iViGBcpEeiw04JpNeJnEA"/>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_-NZCzgEfEe-pl7DLWeTXZw" name="listeningException" visibility="public" method="_-NZCvgEfEe-pl7DLWeTXZw">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_-NZCzwEfEe-pl7DLWeTXZw" name="exception">
+        <type xmi:type="uml:Class" href="../../ClassDiagrams/model.uml#_3iodAhcpEeiw04JpNeJnEA"/>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_-NZC0AEfEe-pl7DLWeTXZw" name="isActive">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_-NZC0QEfEe-pl7DLWeTXZw" name="active">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_-NZC0gEfEe-pl7DLWeTXZw" name="setLog">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_-NZC0wEfEe-pl7DLWeTXZw" name="log">
+        <type xmi:type="uml:Class" href="../../ClassDiagrams/model.uml#_3hl7MhcpEeiw04JpNeJnEA"/>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_-NZC1AEfEe-pl7DLWeTXZw" name="setStatus">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_-NZC1QEfEe-pl7DLWeTXZw" name="status">
+        <type xmi:type="uml:Class" href="../../ClassDiagrams/model.uml#_3hl7NRcpEeiw04JpNeJnEA"/>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_-NZC1gEfEe-pl7DLWeTXZw" name="handleMessageFromClient">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_-NZC1wEfEe-pl7DLWeTXZw" name="arg0">
+        <type xmi:type="uml:Class" href="../../ClassDiagrams/model.uml#_3hTAQhcpEeiw04JpNeJnEA"/>
+      </ownedParameter>
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_-NZC2AEfEe-pl7DLWeTXZw" name="arg1">
+        <type xmi:type="uml:Class" href="../../ClassDiagrams/model.uml#_3iViGBcpEeiw04JpNeJnEA"/>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_-NZC2QEfEe-pl7DLWeTXZw" name="listeningException">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_-NZC2gEfEe-pl7DLWeTXZw" name="exception">
+        <type xmi:type="uml:Class" href="../../ClassDiagrams/model.uml#_3iodAhcpEeiw04JpNeJnEA"/>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_-NZC2wEfEe-pl7DLWeTXZw" name="serverStarted"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_-NZC3AEfEe-pl7DLWeTXZw" name="serverStopped"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_-NZC3QEfEe-pl7DLWeTXZw" name="serverClosed"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_-NZC3gEfEe-pl7DLWeTXZw" name="clientConnected">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_-NZC3wEfEe-pl7DLWeTXZw" name="client">
+        <type xmi:type="uml:Class" href="../../ClassDiagrams/model.uml#_3iViGBcpEeiw04JpNeJnEA"/>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_-NZC4AEfEe-pl7DLWeTXZw" name="setLog">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_-NZC4QEfEe-pl7DLWeTXZw" name="log">
+        <type xmi:type="uml:Class" href="../../ClassDiagrams/model.uml#_3hl7MhcpEeiw04JpNeJnEA"/>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_-NZC4gEfEe-pl7DLWeTXZw" name="setStatus">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_-NZC4wEfEe-pl7DLWeTXZw" name="status">
+        <type xmi:type="uml:Class" href="../../ClassDiagrams/model.uml#_3hl7NRcpEeiw04JpNeJnEA"/>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_-NZC5AEfEe-pl7DLWeTXZw" name="isActive">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_-NZC5QEfEe-pl7DLWeTXZw" name="active">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_-NZC5gEfEe-pl7DLWeTXZw" name="serverStarted"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_-NZC5wEfEe-pl7DLWeTXZw" name="serverStopped"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_-NZC6AEfEe-pl7DLWeTXZw" name="serverClosed"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_-NZC6QEfEe-pl7DLWeTXZw" name="clientConnected">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_-NZC6gEfEe-pl7DLWeTXZw" name="client">
+        <type xmi:type="uml:Class" href="../../ClassDiagrams/model.uml#_3iViGBcpEeiw04JpNeJnEA"/>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_-NZC6wEfEe-pl7DLWeTXZw" name="listeningException">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_-NZC7AEfEe-pl7DLWeTXZw" name="exception">
+        <type xmi:type="uml:Class" href="../../ClassDiagrams/model.uml#_3iodAhcpEeiw04JpNeJnEA"/>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_-NZC7QEfEe-pl7DLWeTXZw" name="handleMessageFromClient">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_-NZC7gEfEe-pl7DLWeTXZw" name="arg0">
+        <type xmi:type="uml:Class" href="../../ClassDiagrams/model.uml#_3hTAQhcpEeiw04JpNeJnEA"/>
+      </ownedParameter>
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_-NZC7wEfEe-pl7DLWeTXZw" name="arg1">
+        <type xmi:type="uml:Class" href="../../ClassDiagrams/model.uml#_3iViGBcpEeiw04JpNeJnEA"/>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_BAZVwAEgEe-pl7DLWeTXZw" name="serverClosed"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_BAbK8AEgEe-pl7DLWeTXZw" name="setLog">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_BAbK8QEgEe-pl7DLWeTXZw" name="log">
+        <type xmi:type="uml:Class" href="../../ClassDiagrams/model.uml#_3hl7MhcpEeiw04JpNeJnEA"/>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_BAdnMAEgEe-pl7DLWeTXZw" name="serverStarted"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_BAh4oAEgEe-pl7DLWeTXZw" name="handleMessageFromClient">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_BAh4oQEgEe-pl7DLWeTXZw" name="arg0">
+        <type xmi:type="uml:Class" href="../../ClassDiagrams/model.uml#_3hTAQhcpEeiw04JpNeJnEA"/>
+      </ownedParameter>
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_BAh4ogEgEe-pl7DLWeTXZw" name="arg1">
+        <type xmi:type="uml:Class" href="../../ClassDiagrams/model.uml#_3iViGBcpEeiw04JpNeJnEA"/>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_BAkU4AEgEe-pl7DLWeTXZw" name="setStatus">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_BAkU4QEgEe-pl7DLWeTXZw" name="status">
+        <type xmi:type="uml:Class" href="../../ClassDiagrams/model.uml#_3hl7NRcpEeiw04JpNeJnEA"/>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_BAqbgAEgEe-pl7DLWeTXZw" name="isActive">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_BAqbgQEgEe-pl7DLWeTXZw" name="active">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_BAte0AEgEe-pl7DLWeTXZw" name="clientConnected">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_BAte0QEgEe-pl7DLWeTXZw" name="client">
+        <type xmi:type="uml:Class" href="../../ClassDiagrams/model.uml#_3iViGBcpEeiw04JpNeJnEA"/>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_BA2owAEgEe-pl7DLWeTXZw" name="serverStopped"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_BA6TIAEgEe-pl7DLWeTXZw" name="listeningException">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_BA6TIQEgEe-pl7DLWeTXZw" name="exception">
+        <type xmi:type="uml:Class" href="../../ClassDiagrams/model.uml#_3iodAhcpEeiw04JpNeJnEA"/>
+      </ownedParameter>
+    </ownedOperation>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_-NZpsAEfEe-pl7DLWeTXZw" name="Hand">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_-NZpsQEfEe-pl7DLWeTXZw" name="tiles" type="_-NZpwgEfEe-pl7DLWeTXZw"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_-NZpsgEfEe-pl7DLWeTXZw" name="discards" type="_-NZpwgEfEe-pl7DLWeTXZw"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_-NZpswEfEe-pl7DLWeTXZw" type="_-NZCoAEfEe-pl7DLWeTXZw">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_-NZptAEfEe-pl7DLWeTXZw"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_-NZptQEfEe-pl7DLWeTXZw" value="1"/>
+    </ownedAttribute>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_-NZptgEfEe-pl7DLWeTXZw" name="getTile">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_-NZptwEfEe-pl7DLWeTXZw" name="tiles" type="_-NZpwgEfEe-pl7DLWeTXZw" direction="return"/>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_-NZpuAEfEe-pl7DLWeTXZw" name="addTile">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_-NZpuQEfEe-pl7DLWeTXZw" name="tile" type="_-NZpwgEfEe-pl7DLWeTXZw"/>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_-NZpugEfEe-pl7DLWeTXZw" name="removeTile">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_-NZpuwEfEe-pl7DLWeTXZw" name="pos">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_-NZpvAEfEe-pl7DLWeTXZw" name="getDiscards">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_-NZpvQEfEe-pl7DLWeTXZw" type="_-NZpwgEfEe-pl7DLWeTXZw" direction="return"/>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_-NZpvgEfEe-pl7DLWeTXZw" name="removeDiscards">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_-NZpvwEfEe-pl7DLWeTXZw" name="pos">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_-NZpwAEfEe-pl7DLWeTXZw" name="sort">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_-NZpwQEfEe-pl7DLWeTXZw" name="hand" type="_-NZpsAEfEe-pl7DLWeTXZw"/>
+    </ownedOperation>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_-NZpwgEfEe-pl7DLWeTXZw" name="Tile" visibility="public">
+    <generalization xmi:type="uml:Generalization" xmi:id="_-NZpwwEfEe-pl7DLWeTXZw">
+      <general xmi:type="uml:Class" href="../../ClassDiagrams/model.uml#_3iyOBBcpEeiw04JpNeJnEA"/>
+    </generalization>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_-NZpxAEfEe-pl7DLWeTXZw" name="client">
+      <type xmi:type="uml:OpaqueBehavior" href="../../ClassDiagrams/model.uml#_3hJPQhcpEeiw04JpNeJnEA"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_-NZpxQEfEe-pl7DLWeTXZw" name="suit">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_-NZpxgEfEe-pl7DLWeTXZw" name="number">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_-NZpxwEfEe-pl7DLWeTXZw" name="Terminal">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_-NZpyAEfEe-pl7DLWeTXZw" type="_-NZpsAEfEe-pl7DLWeTXZw">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_-NZpyQEfEe-pl7DLWeTXZw"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_-NZpygEfEe-pl7DLWeTXZw" value="1"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_TR1FwAEgEe-pl7DLWeTXZw" name="Terminal">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_TR1s0AEgEe-pl7DLWeTXZw" name="suit">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_TR268AEgEe-pl7DLWeTXZw" name="number">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_os6HQwEgEe-pl7DLWeTXZw" type="_-NZCoAEfEe-pl7DLWeTXZw" association="_os6HQAEgEe-pl7DLWeTXZw">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_os6uUAEgEe-pl7DLWeTXZw"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_os6uUQEgEe-pl7DLWeTXZw" value="1"/>
+    </ownedAttribute>
+    <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_-NZpywEfEe-pl7DLWeTXZw" name="getUser">
+      <language>JAVA</language>
+      <body>&#xD;
+    return user;&#xD;
+</body>
+    </ownedBehavior>
+    <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_-NZpzAEfEe-pl7DLWeTXZw" name="setUser">
+      <language>JAVA</language>
+      <body>&#xD;
+    this.user = user;&#xD;
+</body>
+    </ownedBehavior>
+    <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_-NZpzQEfEe-pl7DLWeTXZw" name="ClientGUI">
+      <language>JAVA</language>
+      <body>&#xD;
+    // Set up the chat client.&#xD;
+    client = new ChatClient();&#xD;
+    client.setHost(&quot;localhost&quot;);&#xD;
+    client.setPort(8300);&#xD;
+    try {&#xD;
+        client.openConnection();&#xD;
+    } catch (IOException e) {&#xD;
+        e.printStackTrace();&#xD;
+    }&#xD;
+    // Set the title and default close operation.&#xD;
+    this.setTitle(&quot;Chat Client&quot;);&#xD;
+    this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);&#xD;
+    // Create the card layout container.&#xD;
+    container = new JPanel(cardLayout);&#xD;
+    // Create the four views.&#xD;
+    view1 = new InitialPanel(container);&#xD;
+    view2 = new LoginPanel(container, client);&#xD;
+    view3 = new CreateAccountPanel(container, client);&#xD;
+    view4 = new ContactsPanel(container);&#xD;
+    // Add the views to the card layout container.&#xD;
+    container.add(view1, &quot;1&quot;);&#xD;
+    container.add(view2, &quot;2&quot;);&#xD;
+    container.add(view3, &quot;3&quot;);&#xD;
+    container.add(view4, &quot;4&quot;);&#xD;
+    // Show the initial view in the card layout.&#xD;
+    cardLayout.show(container, &quot;1&quot;);&#xD;
+    // Add the card layout container to the JFrame.&#xD;
+    // GridBagLayout makes the container stay centered in the window.&#xD;
+    this.setLayout(new GridBagLayout());&#xD;
+    this.add(container);&#xD;
+    // Show the JFrame.&#xD;
+    this.setSize(550, 350);&#xD;
+    this.setVisible(true);&#xD;
+</body>
+    </ownedBehavior>
+    <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_-NZpzgEfEe-pl7DLWeTXZw" name="main">
+      <language>JAVA</language>
+      <body>&#xD;
+    new ClientGUI();&#xD;
+</body>
+    </ownedBehavior>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_-NZpzwEfEe-pl7DLWeTXZw" name="main">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_-NZp0AEfEe-pl7DLWeTXZw" name="args">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_-NZp0QEfEe-pl7DLWeTXZw" name="getSuit"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_-NZp0gEfEe-pl7DLWeTXZw" name="getNumber"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_-NZp0wEfEe-pl7DLWeTXZw" name="getTerminal"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_-NZp1AEfEe-pl7DLWeTXZw" name="setSuit">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_-NZp1QEfEe-pl7DLWeTXZw" name="suit">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_-NZp1gEfEe-pl7DLWeTXZw" name="setNumber">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_-NZp1wEfEe-pl7DLWeTXZw" name="number">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_-NZp2AEfEe-pl7DLWeTXZw" name="setTerminal">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_-NZp2QEfEe-pl7DLWeTXZw" name="terminal">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_-NZp2gEfEe-pl7DLWeTXZw" name="setTile">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_-NZp2wEfEe-pl7DLWeTXZw" name="suit">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedParameter>
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_-NZp3AEfEe-pl7DLWeTXZw" name="num">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedParameter>
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_-NZp3QEfEe-pl7DLWeTXZw" name="terminal">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_TR4JEAEgEe-pl7DLWeTXZw" name="setSuit">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_TR4JEQEgEe-pl7DLWeTXZw" name="suit">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_TR4wIAEgEe-pl7DLWeTXZw" name="setTerminal">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_TR4wIQEgEe-pl7DLWeTXZw" name="terminal">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_TR5-QAEgEe-pl7DLWeTXZw" name="setNumber">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_TR5-QQEgEe-pl7DLWeTXZw" name="number">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_TR7MYAEgEe-pl7DLWeTXZw" name="setTile">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_TR7MYQEgEe-pl7DLWeTXZw" name="suit">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedParameter>
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_TR7MYgEgEe-pl7DLWeTXZw" name="num">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedParameter>
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_TR7MYwEgEe-pl7DLWeTXZw" name="terminal">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_TR8agAEgEe-pl7DLWeTXZw" name="getSuit"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_TR9ooAEgEe-pl7DLWeTXZw" name="getTerminal"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_TR_d0AEgEe-pl7DLWeTXZw" name="getNumber"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_os6HQAEgEe-pl7DLWeTXZw" memberEnd="_os6HQwEgEe-pl7DLWeTXZw _os6uUgEgEe-pl7DLWeTXZw">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_os6HQQEgEe-pl7DLWeTXZw" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_os6HQgEgEe-pl7DLWeTXZw" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_os6uUgEgEe-pl7DLWeTXZw" type="_-NZpwgEfEe-pl7DLWeTXZw" association="_os6HQAEgEe-pl7DLWeTXZw"/>
+  </packagedElement>
+</uml:Model>
